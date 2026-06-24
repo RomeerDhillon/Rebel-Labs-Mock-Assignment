@@ -148,8 +148,34 @@ def main() -> None:
             features["reg_rep_share"] = 0.30 + 0.15 * (features["margin_r_2020"].fillna(0) / 2 + 0.25 - 0.50)
             features["reg_unaf_share"] = 1.0 - features["reg_dem_share"] - features["reg_rep_share"]
 
-    # Ensure we have 100 counties
-    print(f"  Total counties: {len(features)}")
+    # --- Validation ---
+    n_counties = len(features)
+    print(f"  Total counties: {n_counties}")
+    if n_counties != 100:
+        print(f"  WARNING: Expected 100 counties, got {n_counties}")
+
+    dupes = features["county_fips"].duplicated()
+    if dupes.any():
+        print(f"  WARNING: Duplicate FIPS codes: {features.loc[dupes, 'county_fips'].tolist()}")
+        features = features.drop_duplicates(subset="county_fips", keep="first")
+
+    margin_cols = [c for c in features.columns if c.startswith("margin_r_")]
+    for col in margin_cols:
+        bad = features[col].abs() > 1.0
+        if bad.any():
+            print(f"  WARNING: {col} has {bad.sum()} values outside [-1, 1], clipping")
+            features[col] = features[col].clip(-1.0, 1.0)
+
+    if "reg_dem_share" in features.columns:
+        share_sum = features[["reg_dem_share", "reg_rep_share", "reg_unaf_share"]].sum(axis=1)
+        bad_sums = (share_sum < 0.95) | (share_sum > 1.05)
+        if bad_sums.any():
+            print(f"  WARNING: {bad_sums.sum()} counties have registration shares not summing to ~1.0")
+
+    if "total_pop" in features.columns:
+        bad_pop = features["total_pop"] <= 0
+        if bad_pop.any():
+            print(f"  WARNING: {bad_pop.sum()} counties have non-positive population")
 
     # Save
     out_path = os.path.join(PROCESSED_DIR, "county_features.csv")

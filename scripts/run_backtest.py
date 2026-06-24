@@ -101,6 +101,7 @@ def run_backtest(
             n_iterations=n_iterations,
             seed=seed,
             statewide_shift=statewide_shift,
+            use_urbanicity_shift=False,
         )
         results.append(result)
 

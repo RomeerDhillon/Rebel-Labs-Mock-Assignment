@@ -1,12 +1,12 @@
 {
   "simulation": {
-    "pearson_r": 0.9709,
+    "pearson_r": 0.9802,
     "p_value": 0.0,
-    "mae": 0.0664,
-    "rmse": 0.0874,
-    "directional_accuracy": 0.93,
-    "max_error": 0.2806,
-    "median_error": 0.0459,
+    "mae": 0.0475,
+    "rmse": 0.0607,
+    "directional_accuracy": 0.94,
+    "max_error": 0.2236,
+    "median_error": 0.0379,
     "n_counties": 100
   },
   "baseline": {
@@ -20,9 +20,9 @@
     "n_counties": 100
   },
   "improvement": {
-    "mae_improvement": -0.0319,
-    "rmse_improvement": -0.0441,
-    "correlation_improvement": -0.0174,
-    "directional_improvement": -0.04
+    "mae_improvement": -0.013,
+    "rmse_improvement": -0.0174,
+    "correlation_improvement": -0.0081,
+    "directional_improvement": -0.03
   }
 }

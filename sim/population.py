@@ -50,7 +50,7 @@ def generate_county_population(
     county_features: Dict[str, Any],
     n_voters: int,
     rng: np.random.RandomState,
-) -> List[Dict[str, Any]]:
+) -> Dict[str, np.ndarray]:
     """
     Generate a synthetic voter population for a single county.
 
@@ -65,15 +65,10 @@ def generate_county_population(
 
     Returns
     -------
-    list of dict
-        Each dict represents one synthetic voter with attributes:
-        - age_band: str
-        - sex: str ('M' or 'F')
-        - race: str ('white', 'black', 'hispanic', 'other')
-        - education: str ('college' or 'no_college')
-        - party_reg: str ('dem', 'rep', 'unaf')
-        - urban_rural: str ('urban', 'suburban', 'rural')
-        - county_fips: str
+    dict of np.ndarray
+        Columnar representation with keys:
+        - age_band, sex, race, education, party_reg, urban_rural, county_fips
+        Each value is a 1-D array of strings with length n_voters.
     """
     cf = county_features
 
@@ -138,29 +133,17 @@ def generate_county_population(
     # --- Sex (approximate 52% F, 48% M among voters) ---
     sex_probs = np.array([0.48, 0.52])
 
-    # --- Generate voters ---
-    county_fips = str(cf.get("county_fips", "00000"))
-
-    ages = rng.choice(age_labels, size=n_voters, p=age_probs)
-    races = rng.choice(race_labels, size=n_voters, p=race_probs)
-    sexes = rng.choice(["M", "F"], size=n_voters, p=sex_probs)
-    educations = rng.choice(
-        ["college", "no_college"],
-        size=n_voters,
-        p=[pct_college, 1 - pct_college],
-    )
-    parties = rng.choice(party_labels, size=n_voters, p=party_probs)
-
-    voters = []
-    for i in range(n_voters):
-        voters.append({
-            "age_band": ages[i],
-            "sex": sexes[i],
-            "race": races[i],
-            "education": educations[i],
-            "party_reg": parties[i],
-            "urban_rural": urban_rural,
-            "county_fips": county_fips,
-        })
-
-    return voters
+    # --- Generate voters (columnar) ---
+    return {
+        "age_band": rng.choice(age_labels, size=n_voters, p=age_probs),
+        "sex": rng.choice(["M", "F"], size=n_voters, p=sex_probs),
+        "race": rng.choice(race_labels, size=n_voters, p=race_probs),
+        "education": rng.choice(
+            ["college", "no_college"],
+            size=n_voters,
+            p=[pct_college, 1 - pct_college],
+        ),
+        "party_reg": rng.choice(party_labels, size=n_voters, p=party_probs),
+        "urban_rural": np.full(n_voters, urban_rural),
+        "county_fips": np.full(n_voters, str(cf.get("county_fips", "00000"))),
+    }

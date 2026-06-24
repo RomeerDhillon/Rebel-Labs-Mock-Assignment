@@ -28,12 +28,12 @@ This is repeated across 50 Monte Carlo iterations per county with fixed random s
 
 All pre-election, publicly available:
 
-| Source | Data | Time Period |
-|--------|------|-------------|
-| tonmcg/US_County_Level_Election_Results_08-16 | County presidential returns (wide format) | 2008, 2012, 2016 |
-| tonmcg/US_County_Level_Election_Results_08-24 | County presidential returns | 2020 |
-| NC State Board of Elections | Voter registration by county and party | Oct 12, 2024 |
-| US Census ACS 5-Year | Demographics: population, race, education, age, income, land area | 2022 |
+| Source                                        | Data                                                              | Time Period      |
+| --------------------------------------------- | ----------------------------------------------------------------- | ---------------- |
+| tonmcg/US_County_Level_Election_Results_08-16 | County presidential returns (wide format)                         | 2008, 2012, 2016 |
+| tonmcg/US_County_Level_Election_Results_08-24 | County presidential returns                                       | 2020             |
+| NC State Board of Elections                   | Voter registration by county and party                            | Oct 12, 2024     |
+| US Census ACS 5-Year                          | Demographics: population, race, education, age, income, land area | 2022             |
 
 **No 2024 election results are used for training, tuning, or feature engineering.**
 
@@ -70,13 +70,13 @@ logit(P_turnout) = county_baseline_logit + Σ(demographic_coefficients)
 
 The county baseline is derived from the county's historical turnout rate (e.g., 2020 turnout). Demographic coefficients shift the probability:
 
-| Factor | Direction | Rationale |
-|--------|-----------|-----------|
-| Age 65+ | +turnout | Highest historical turnout group |
-| Age 18-24 | −turnout | Lowest historical turnout group |
-| College educated | +turnout | Strong education-turnout correlation |
-| Registered R/D | +turnout | Partisans vote more than unaffiliated |
-| Rural | slight −turnout | Historical rural turnout slightly lower |
+| Factor           | Direction       | Rationale                               |
+| ---------------- | --------------- | --------------------------------------- |
+| Age 65+          | +turnout        | Highest historical turnout group        |
+| Age 18-24        | −turnout        | Lowest historical turnout group         |
+| College educated | +turnout        | Strong education-turnout correlation    |
+| Registered R/D   | +turnout        | Partisans vote more than unaffiliated   |
+| Rural            | slight −turnout | Historical rural turnout slightly lower |
 
 ### 5.3 Vote Choice Model (`sim/vote_choice.py`)
 
@@ -90,46 +90,58 @@ logit(P_vote_R) = county_baseline_logit + Σ(demographic_coefficients)
 
 **Demographic coefficients** provide small modulations:
 
-| Factor | Direction | Magnitude | Rationale |
-|--------|-----------|-----------|-----------|
-| Registered R | +R | moderate | Party loyalty effect |
-| Registered D | +D | moderate | Party loyalty effect |
-| Black | +D | moderate | Strong D alignment nationally |
-| Hispanic | +D | small | D lean nationally |
-| College | +D | small | Education realignment post-2016 |
-| Age 65+ | +R | small | Generational lean |
-| Rural | +R | small | Rural-urban divide |
-| Male | +R | small | Gender gap |
+| Factor       | Direction | Magnitude | Rationale                       |
+| ------------ | --------- | --------- | ------------------------------- |
+| Registered R | +R        | moderate  | Party loyalty effect            |
+| Registered D | +D        | moderate  | Party loyalty effect            |
+| Black        | +D        | moderate  | Strong D alignment nationally   |
+| Hispanic     | +D        | small     | D lean nationally               |
+| College      | +D        | small     | Education realignment post-2016 |
+| Age 65+      | +R        | small     | Generational lean               |
+| Rural        | +R        | small     | Rural-urban divide              |
+| Male         | +R        | small     | Gender gap                      |
 
 **Key design choice**: Coefficients are deliberately small because the county baseline already encodes most of the information that demographics would predict. Large demographic effects would double-count and distort margins.
 
 ### 5.4 Statewide Shift
 
-A uniform statewide shift parameter (default: +0.01 for 2024, reflecting pre-election polling showing a slight R shift from 2020) is added to every county's partisan baseline.
+An urbanicity-aware statewide shift is applied for 2024, reflecting pre-election indicators of continued urban/rural divergence:
+
+- **Urban**: -0.5% (slight continued D shift)
+- **Suburban**: +1.0% (slight R shift)
+- **Rural**: +1.5% (continued R shift)
+
+These are calibrated from the 2016→2020 county-level differentials, not from 2024 results.
+
+### 5.5 Statewide Aggregation
+
+County margins are weighted by 2020 total vote counts to produce a population-weighted statewide result. This is critical because NC's 100 counties vary enormously in population (Wake County: ~550K votes vs. Tyrrell County: ~1.6K votes). The unweighted county average is ~R+19.7% (because most counties are small and rural), but the population-weighted statewide prediction is **R 51.0% — D 49.0% (R+1.9%)**, which is consistent with 2020's R+1.4% result plus a small predicted R shift.
 
 ## 6. Validation
 
 ### 6.1 Backtest Design
 
 To validate without data leakage:
+
 - **Training period**: 2008–2016 election results
 - **Test period**: 2020 county margins
 - The model pretends 2020 hasn't happened: 2016 margin replaces 2020 as "most recent," 2012 replaces 2016 as "prior."
 
 ### 6.2 Backtest Results
 
-| Metric | Behavioral Sim | Baseline (2016→2020) |
-|--------|---------------|---------------------|
-| Pearson correlation | 0.97 | 0.99 |
-| Mean Absolute Error | 0.066 | 0.035 |
-| RMSE | 0.087 | 0.043 |
-| Directional accuracy | 93% | 97% |
+| Metric               | Behavioral Sim | Baseline (2016→2020) |
+| -------------------- | -------------- | -------------------- |
+| Pearson correlation  | 0.98           | 0.99                 |
+| Mean Absolute Error  | 0.048          | 0.035                |
+| RMSE                 | 0.061          | 0.043                |
+| Directional accuracy | 94%            | 97%                  |
 
 ### 6.3 Interpretation
 
 The prior-margin baseline is exceptionally hard to beat because county partisanship is highly stable (correlations above 0.98 between consecutive elections). This is a well-documented finding in political science.
 
-The behavioral simulation achieves strong absolute performance (0.97 correlation, 93% directional accuracy) while providing genuine voter-level mechanics that the baseline cannot:
+The behavioral simulation achieves strong absolute performance (0.98 correlation, 94% directional accuracy) while providing genuine voter-level mechanics that the baseline cannot:
+
 - Interpretable coefficients for every demographic group
 - Natural uncertainty quantification
 - Counterfactual scenario capability

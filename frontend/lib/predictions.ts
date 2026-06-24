@@ -8,6 +8,7 @@ export interface CountyPrediction {
   ci_low: number;
   ci_high: number;
   avg_turnout_rate: number;
+  total_votes_2020: number;
 }
 
 const predictions: CountyPrediction[] = data as CountyPrediction[];

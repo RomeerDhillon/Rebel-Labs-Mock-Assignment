@@ -20,6 +20,7 @@ from typing import Dict, List, Any, Optional
 from sim.population import generate_county_population
 from sim.turnout import simulate_turnout, compute_county_baseline_logit
 from sim.vote_choice import simulate_vote_choice, compute_county_partisan_baseline
+from sim.utils import validate_county_features
 
 
 DEFAULT_VOTERS_PER_COUNTY = 2000  # Synthetic voters per county per iteration
@@ -28,12 +29,25 @@ DEFAULT_SEED = 42                 # Master random seed
 DEFAULT_TURNOUT_SENSITIVITY = 1.0
 DEFAULT_PARTISAN_ELASTICITY = 1.0
 
-# Statewide partisan environment shift
-# In NC, the 2016→2020 trend was ~+1.3 pts toward D.
-# For 2024 prediction, we model a slight R shift based on pre-election
-# environment (national mood, economic indicators, etc.)
-# This is calibrated from the 2016→2020 trend, NOT from 2024 results.
-DEFAULT_STATEWIDE_SHIFT = 0.01   # Slight R shift from 2020 baseline
+# Urbanicity-aware statewide shift for 2024 prediction.
+# In NC 2016→2020, urban counties shifted D by ~2-3 pts while rural
+# shifted R by ~1-2 pts. For 2024, pre-election indicators suggest
+# a slight R shift overall with continued urban/rural divergence.
+# These are calibrated from the 2016→2020 differential, NOT from 2024 results.
+URBANICITY_SHIFT = {
+    "urban": -0.005,   # Urban areas: slight D shift continues
+    "suburban": 0.01,  # Suburban: slight R shift
+    "rural": 0.015,    # Rural: continued R shift
+}
+DEFAULT_STATEWIDE_SHIFT = 0.01   # Fallback if urbanicity unavailable
+
+
+def _get_statewide_shift(county_features: Dict[str, Any], default_shift: float) -> float:
+    """Return urbanicity-aware statewide shift for this county."""
+    urban_rural = county_features.get("urban_rural", None)
+    if urban_rural and not pd.isna(urban_rural) and urban_rural in URBANICITY_SHIFT:
+        return URBANICITY_SHIFT[urban_rural]
+    return default_shift
 
 
 def simulate_county(
@@ -44,6 +58,7 @@ def simulate_county(
     turnout_sensitivity: float = DEFAULT_TURNOUT_SENSITIVITY,
     partisan_elasticity: float = DEFAULT_PARTISAN_ELASTICITY,
     statewide_shift: float = DEFAULT_STATEWIDE_SHIFT,
+    use_urbanicity_shift: bool = True,
 ) -> Dict[str, Any]:
     """
     Run the full simulation for one county.
@@ -52,7 +67,7 @@ def simulate_county(
     - county_fips, county_name
     - predicted_margin_r: average R-D margin across iterations
     - margin_std: standard deviation across iterations
-    - ci_low, ci_high: 90% confidence interval
+    - ci_low, ci_high: 95% confidence interval (2.5th/97.5th percentile)
     - avg_turnout_rate: average simulated turnout rate
     - n_iterations: number of iterations run
     """
@@ -66,12 +81,24 @@ def simulate_county(
 
     if pd.isna(margin_2020):
         margin_2020 = cf.get("avg_margin_r", 0.0)
+        if pd.isna(margin_2020):
+            margin_2020 = 0.0
     if margin_2016 is not None and pd.isna(margin_2016):
         margin_2016 = None
 
+    # Extract margin trend for trend-aware baseline
+    margin_trend = cf.get("margin_trend_16_20", None)
+    if margin_trend is not None and pd.isna(margin_trend):
+        margin_trend = None
+
+    # Urbanicity-aware statewide shift (disabled for backtesting)
+    if use_urbanicity_shift:
+        county_shift = _get_statewide_shift(cf, statewide_shift)
+    else:
+        county_shift = statewide_shift
+
     # Turnout baseline from historical rates
     turnout_2020 = cf.get("turnout_2020", 0)
-    turnout_2016 = cf.get("turnout_2016", 0)
 
     # Estimate registered voters from total votes / turnout rate
     # NC average turnout rate ~75% of registered in presidential years
@@ -90,61 +117,57 @@ def simulate_county(
 
     turnout_baseline_logit = compute_county_baseline_logit(hist_turnout_rate)
     partisan_baseline_logit = compute_county_partisan_baseline(
-        margin_2020, margin_2016, statewide_shift
+        margin_2020, margin_2016, county_shift, margin_trend
     )
 
     # Run Monte Carlo iterations
-    iteration_margins = []
-    iteration_turnout_rates = []
-    master_rng = np.random.RandomState(seed)
+    iteration_margins = np.empty(n_iterations)
+    iteration_turnout_rates = np.empty(n_iterations)
 
-    # Create per-county seed from master + county FIPS
-    county_seed_base = seed + hash(county_fips) % 10000
+    # Deterministic per-county seed using int(FIPS) instead of hash()
+    county_seed_base = seed + int(county_fips) * 7
 
     for it in range(n_iterations):
         iter_seed = county_seed_base + it * 1000
         rng = np.random.RandomState(iter_seed)
 
-        # 1. Generate population
+        # 1. Generate population (dict of arrays)
         voters = generate_county_population(cf, n_voters, rng)
 
-        # 2. Simulate turnout
+        # 2. Simulate turnout (bool array)
         turned_out = simulate_turnout(
             voters, turnout_baseline_logit, rng, turnout_sensitivity
         )
 
-        # 3. Simulate vote choice
+        # 3. Simulate vote choice (int8 array: 1=R, 0=D, -1=abstain)
         votes = simulate_vote_choice(
             voters, turned_out, partisan_baseline_logit, rng, partisan_elasticity
         )
 
-        # 4. Aggregate
-        n_voted = sum(turned_out)
+        # 4. Aggregate (vectorized)
+        n_voted = int(np.sum(turned_out))
         if n_voted == 0:
-            iteration_margins.append(0.0)
-            iteration_turnout_rates.append(0.0)
+            iteration_margins[it] = 0.0
+            iteration_turnout_rates[it] = 0.0
             continue
 
-        n_r = sum(1 for v in votes if v == 1)
-        n_d = sum(1 for v in votes if v == 0)
+        n_r = int(np.sum(votes == 1))
+        n_d = int(np.sum(votes == 0))
         total_2party = n_r + n_d
 
         if total_2party > 0:
-            margin_r = (n_r - n_d) / total_2party
+            iteration_margins[it] = (n_r - n_d) / total_2party
         else:
-            margin_r = 0.0
+            iteration_margins[it] = 0.0
 
-        iteration_margins.append(margin_r)
-        iteration_turnout_rates.append(n_voted / n_voters)
+        iteration_turnout_rates[it] = n_voted / n_voters
 
     # Compute summary statistics
-    margins = np.array(iteration_margins)
-    turnout_rates = np.array(iteration_turnout_rates)
-
-    predicted_margin = float(np.mean(margins))
-    margin_std = float(np.std(margins))
-    ci_low = float(np.percentile(margins, 5))
-    ci_high = float(np.percentile(margins, 95))
+    predicted_margin = float(np.mean(iteration_margins))
+    margin_std = float(np.std(iteration_margins))
+    # True 95% CI: 2.5th and 97.5th percentiles
+    ci_low = float(np.percentile(iteration_margins, 2.5))
+    ci_high = float(np.percentile(iteration_margins, 97.5))
 
     return {
         "county_fips": county_fips,
@@ -153,13 +176,13 @@ def simulate_county(
         "margin_std": round(margin_std, 6),
         "ci_low": round(ci_low, 6),
         "ci_high": round(ci_high, 6),
-        "avg_turnout_rate": round(float(np.mean(turnout_rates)), 4),
+        "avg_turnout_rate": round(float(np.mean(iteration_turnout_rates)), 4),
         "n_iterations": n_iterations,
     }
 
 
 def run_full_simulation(
-    features_path: str = None,
+    features_path: Optional[str] = None,
     n_voters: int = DEFAULT_VOTERS_PER_COUNTY,
     n_iterations: int = DEFAULT_ITERATIONS,
     seed: int = DEFAULT_SEED,
@@ -179,7 +202,12 @@ def run_full_simulation(
         )
 
     df = pd.read_csv(features_path)
-    df["county_fips"] = df["county_fips"].astype(str).str.zfill(5)
+
+    # Validate input data
+    df = validate_county_features(df)
+
+    if verbose:
+        print(f"  Loaded {len(df)} counties from {features_path}")
 
     results = []
     for idx, row in df.iterrows():
@@ -206,6 +234,8 @@ def run_full_simulation(
         d_counties = (results_df["predicted_margin_r"] <= 0).sum()
         print(f"  R-leaning counties: {r_counties}")
         print(f"  D-leaning counties: {d_counties}")
-        print(f"  Statewide margin (pop-weighted): would need county pop for exact)")
+        avg = results_df["predicted_margin_r"].mean()
+        party = "R" if avg > 0 else "D"
+        print(f"  Avg county margin (unweighted): {party}+{abs(avg)*100:.1f}%")
 
     return results_df

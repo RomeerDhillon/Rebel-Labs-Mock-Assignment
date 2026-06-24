@@ -2,901 +2,1001 @@
   {
     "county_fips": "37001",
     "county_name": "Alamance",
-    "predicted_margin_r": 0.098254,
-    "margin_std": 0.026216,
-    "ci_low": 0.058119,
-    "ci_high": 0.140324,
-    "avg_turnout_rate": 0.7406
+    "predicted_margin_r": 0.101238,
+    "margin_std": 0.022782,
+    "ci_low": 0.041112,
+    "ci_high": 0.135346,
+    "avg_turnout_rate": 0.7396,
+    "total_votes_2020": 84881
   },
   {
     "county_fips": "37003",
     "county_name": "Alexander",
-    "predicted_margin_r": 0.640562,
-    "margin_std": 0.021054,
-    "ci_low": 0.606021,
-    "ci_high": 0.666895,
-    "avg_turnout_rate": 0.8088
+    "predicted_margin_r": 0.61376,
+    "margin_std": 0.017126,
+    "ci_low": 0.578636,
+    "ci_high": 0.645625,
+    "avg_turnout_rate": 0.8069,
+    "total_votes_2020": 20033
   },
   {
     "county_fips": "37005",
     "county_name": "Alleghany",
-    "predicted_margin_r": 0.549743,
-    "margin_std": 0.02053,
-    "ci_low": 0.518686,
-    "ci_high": 0.580034,
-    "avg_turnout_rate": 0.6823
+    "predicted_margin_r": 0.53276,
+    "margin_std": 0.020521,
+    "ci_low": 0.483523,
+    "ci_high": 0.566258,
+    "avg_turnout_rate": 0.6791,
+    "total_votes_2020": 6013
   },
   {
     "county_fips": "37007",
     "county_name": "Anson",
-    "predicted_margin_r": -0.140816,
-    "margin_std": 0.031333,
-    "ci_low": -0.201427,
-    "ci_high": -0.093101,
-    "avg_turnout_rate": 0.6182
+    "predicted_margin_r": -0.065709,
+    "margin_std": 0.03136,
+    "ci_low": -0.129414,
+    "ci_high": 0.000696,
+    "avg_turnout_rate": 0.6234,
+    "total_votes_2020": 11110
   },
   {
     "county_fips": "37009",
     "county_name": "Ashe",
-    "predicted_margin_r": 0.52531,
-    "margin_std": 0.019028,
-    "ci_low": 0.500317,
-    "ci_high": 0.5514,
-    "avg_turnout_rate": 0.7836
+    "predicted_margin_r": 0.500336,
+    "margin_std": 0.020476,
+    "ci_low": 0.459373,
+    "ci_high": 0.535826,
+    "avg_turnout_rate": 0.7853,
+    "total_votes_2020": 15615
   },
   {
     "county_fips": "37011",
     "county_name": "Avery",
-    "predicted_margin_r": 0.616104,
-    "margin_std": 0.019335,
-    "ci_low": 0.587855,
-    "ci_high": 0.650102,
-    "avg_turnout_rate": 0.778
+    "predicted_margin_r": 0.581949,
+    "margin_std": 0.0197,
+    "ci_low": 0.546482,
+    "ci_high": 0.618846,
+    "avg_turnout_rate": 0.776,
+    "total_votes_2020": 9363
   },
   {
     "county_fips": "37013",
     "county_name": "Beaufort",
-    "predicted_margin_r": 0.252809,
-    "margin_std": 0.026063,
-    "ci_low": 0.217716,
-    "ci_high": 0.29918,
-    "avg_turnout_rate": 0.7191
+    "predicted_margin_r": 0.272539,
+    "margin_std": 0.024868,
+    "ci_low": 0.229624,
+    "ci_high": 0.310728,
+    "avg_turnout_rate": 0.7157,
+    "total_votes_2020": 26070
   },
   {
     "county_fips": "37015",
     "county_name": "Bertie",
-    "predicted_margin_r": -0.324064,
-    "margin_std": 0.023151,
-    "ci_low": -0.362152,
-    "ci_high": -0.2889,
-    "avg_turnout_rate": 0.6811
+    "predicted_margin_r": -0.242248,
+    "margin_std": 0.025659,
+    "ci_low": -0.293461,
+    "ci_high": -0.192968,
+    "avg_turnout_rate": 0.6811,
+    "total_votes_2020": 9756
   },
   {
     "county_fips": "37017",
     "county_name": "Bladen",
-    "predicted_margin_r": 0.074729,
-    "margin_std": 0.026195,
-    "ci_low": 0.035369,
-    "ci_high": 0.111834,
-    "avg_turnout_rate": 0.6968
+    "predicted_margin_r": 0.132117,
+    "margin_std": 0.025656,
+    "ci_low": 0.075763,
+    "ci_high": 0.169644,
+    "avg_turnout_rate": 0.6985,
+    "total_votes_2020": 17002
   },
   {
     "county_fips": "37019",
     "county_name": "Brunswick",
-    "predicted_margin_r": 0.312221,
-    "margin_std": 0.023118,
-    "ci_low": 0.276682,
-    "ci_high": 0.351029,
-    "avg_turnout_rate": 0.7973
+    "predicted_margin_r": 0.295201,
+    "margin_std": 0.023616,
+    "ci_low": 0.255142,
+    "ci_high": 0.338726,
+    "avg_turnout_rate": 0.8,
+    "total_votes_2020": 89160
   },
   {
     "county_fips": "37021",
     "county_name": "Buncombe",
-    "predicted_margin_r": -0.183783,
-    "margin_std": 0.023164,
-    "ci_low": -0.22765,
-    "ci_high": -0.147903,
-    "avg_turnout_rate": 0.8421
+    "predicted_margin_r": -0.187103,
+    "margin_std": 0.026117,
+    "ci_low": -0.233879,
+    "ci_high": -0.137443,
+    "avg_turnout_rate": 0.8417,
+    "total_votes_2020": 158927
   },
   {
     "county_fips": "37023",
     "county_name": "Burke",
-    "predicted_margin_r": 0.448914,
-    "margin_std": 0.021069,
-    "ci_low": 0.420394,
-    "ci_high": 0.485506,
-    "avg_turnout_rate": 0.7625
+    "predicted_margin_r": 0.4371,
+    "margin_std": 0.024322,
+    "ci_low": 0.393864,
+    "ci_high": 0.48332,
+    "avg_turnout_rate": 0.7617,
+    "total_votes_2020": 44137
   },
   {
     "county_fips": "37025",
     "county_name": "Cabarrus",
-    "predicted_margin_r": 0.14307,
-    "margin_std": 0.023151,
-    "ci_low": 0.101097,
-    "ci_high": 0.179566,
-    "avg_turnout_rate": 0.8139
+    "predicted_margin_r": 0.127369,
+    "margin_std": 0.023799,
+    "ci_low": 0.078939,
+    "ci_high": 0.167015,
+    "avg_turnout_rate": 0.8121,
+    "total_votes_2020": 115399
   },
   {
     "county_fips": "37027",
     "county_name": "Caldwell",
-    "predicted_margin_r": 0.572427,
-    "margin_std": 0.017169,
-    "ci_low": 0.550659,
-    "ci_high": 0.603628,
-    "avg_turnout_rate": 0.8529
+    "predicted_margin_r": 0.542195,
+    "margin_std": 0.015473,
+    "ci_low": 0.51751,
+    "ci_high": 0.570607,
+    "avg_turnout_rate": 0.8536,
+    "total_votes_2020": 42364
   },
   {
     "county_fips": "37029",
     "county_name": "Camden",
-    "predicted_margin_r": 0.516878,
-    "margin_std": 0.022009,
-    "ci_low": 0.481807,
-    "ci_high": 0.545761,
-    "avg_turnout_rate": 0.7689
+    "predicted_margin_r": 0.501488,
+    "margin_std": 0.02155,
+    "ci_low": 0.465086,
+    "ci_high": 0.543013,
+    "avg_turnout_rate": 0.7673,
+    "total_votes_2020": 5849
   },
   {
     "county_fips": "37031",
     "county_name": "Carteret",
-    "predicted_margin_r": 0.495043,
-    "margin_std": 0.021254,
-    "ci_low": 0.462715,
-    "ci_high": 0.525127,
-    "avg_turnout_rate": 0.8523
+    "predicted_margin_r": 0.470836,
+    "margin_std": 0.022396,
+    "ci_low": 0.423884,
+    "ci_high": 0.508868,
+    "avg_turnout_rate": 0.8543,
+    "total_votes_2020": 42121
   },
   {
     "county_fips": "37033",
     "county_name": "Caswell",
-    "predicted_margin_r": 0.1513,
-    "margin_std": 0.026141,
-    "ci_low": 0.106499,
-    "ci_high": 0.1951,
-    "avg_turnout_rate": 0.725
+    "predicted_margin_r": 0.177149,
+    "margin_std": 0.023986,
+    "ci_low": 0.132516,
+    "ci_high": 0.219406,
+    "avg_turnout_rate": 0.7237,
+    "total_votes_2020": 11949
   },
   {
     "county_fips": "37035",
     "county_name": "Catawba",
-    "predicted_margin_r": 0.417149,
-    "margin_std": 0.019735,
-    "ci_low": 0.390759,
-    "ci_high": 0.449289,
-    "avg_turnout_rate": 0.8356
+    "predicted_margin_r": 0.394508,
+    "margin_std": 0.02369,
+    "ci_low": 0.347539,
+    "ci_high": 0.437765,
+    "avg_turnout_rate": 0.8355,
+    "total_votes_2020": 82277
   },
   {
     "county_fips": "37037",
     "county_name": "Chatham",
-    "predicted_margin_r": -0.102388,
-    "margin_std": 0.025775,
-    "ci_low": -0.145141,
-    "ci_high": -0.065372,
-    "avg_turnout_rate": 0.8657
+    "predicted_margin_r": -0.092942,
+    "margin_std": 0.024569,
+    "ci_low": -0.129975,
+    "ci_high": -0.042615,
+    "avg_turnout_rate": 0.8637,
+    "total_votes_2020": 47973
   },
   {
     "county_fips": "37039",
     "county_name": "Cherokee",
-    "predicted_margin_r": 0.633395,
-    "margin_std": 0.016778,
-    "ci_low": 0.608608,
-    "ci_high": 0.657226,
-    "avg_turnout_rate": 0.8079
+    "predicted_margin_r": 0.598951,
+    "margin_std": 0.021716,
+    "ci_low": 0.562336,
+    "ci_high": 0.644796,
+    "avg_turnout_rate": 0.8088,
+    "total_votes_2020": 16211
   },
   {
     "county_fips": "37041",
     "county_name": "Chowan",
-    "predicted_margin_r": 0.129895,
-    "margin_std": 0.024573,
-    "ci_low": 0.093958,
-    "ci_high": 0.170384,
-    "avg_turnout_rate": 0.7325
+    "predicted_margin_r": 0.164442,
+    "margin_std": 0.021207,
+    "ci_low": 0.12849,
+    "ci_high": 0.211598,
+    "avg_turnout_rate": 0.7353,
+    "total_votes_2020": 7718
   },
   {
     "county_fips": "37043",
     "county_name": "Clay",
-    "predicted_margin_r": 0.584583,
-    "margin_std": 0.018469,
-    "ci_low": 0.554428,
-    "ci_high": 0.612547,
-    "avg_turnout_rate": 0.8191
+    "predicted_margin_r": 0.546846,
+    "margin_std": 0.018954,
+    "ci_low": 0.518566,
+    "ci_high": 0.582571,
+    "avg_turnout_rate": 0.8211,
+    "total_votes_2020": 6811
   },
   {
     "county_fips": "37045",
     "county_name": "Cleveland",
-    "predicted_margin_r": 0.338676,
-    "margin_std": 0.023688,
-    "ci_low": 0.295887,
-    "ci_high": 0.374043,
-    "avg_turnout_rate": 0.7843
+    "predicted_margin_r": 0.351753,
+    "margin_std": 0.023082,
+    "ci_low": 0.313746,
+    "ci_high": 0.401538,
+    "avg_turnout_rate": 0.7867,
+    "total_votes_2020": 50753
   },
   {
     "county_fips": "37047",
     "county_name": "Columbus",
-    "predicted_margin_r": 0.246146,
-    "margin_std": 0.02378,
-    "ci_low": 0.207668,
-    "ci_high": 0.288073,
-    "avg_turnout_rate": 0.6732
+    "predicted_margin_r": 0.265903,
+    "margin_std": 0.023853,
+    "ci_low": 0.216162,
+    "ci_high": 0.299716,
+    "avg_turnout_rate": 0.6766,
+    "total_votes_2020": 26278
   },
   {
     "county_fips": "37049",
     "county_name": "Craven",
-    "predicted_margin_r": 0.213285,
-    "margin_std": 0.022268,
-    "ci_low": 0.173699,
-    "ci_high": 0.248226,
-    "avg_turnout_rate": 0.7477
+    "predicted_margin_r": 0.218537,
+    "margin_std": 0.026049,
+    "ci_low": 0.16664,
+    "ci_high": 0.271489,
+    "avg_turnout_rate": 0.7489,
+    "total_votes_2020": 52180
   },
   {
     "county_fips": "37051",
     "county_name": "Cumberland",
-    "predicted_margin_r": -0.237212,
-    "margin_std": 0.025144,
-    "ci_low": -0.273047,
-    "ci_high": -0.196123,
-    "avg_turnout_rate": 0.7458
+    "predicted_margin_r": -0.177606,
+    "margin_std": 0.021077,
+    "ci_low": -0.213414,
+    "ci_high": -0.142282,
+    "avg_turnout_rate": 0.7446,
+    "total_votes_2020": 144501
   },
   {
     "county_fips": "37053",
     "county_name": "Currituck",
-    "predicted_margin_r": 0.544721,
-    "margin_std": 0.019346,
-    "ci_low": 0.515404,
-    "ci_high": 0.573808,
-    "avg_turnout_rate": 0.8163
+    "predicted_margin_r": 0.511771,
+    "margin_std": 0.017674,
+    "ci_low": 0.478558,
+    "ci_high": 0.543221,
+    "avg_turnout_rate": 0.8163,
+    "total_votes_2020": 15852
   },
   {
     "county_fips": "37055",
     "county_name": "Dare",
-    "predicted_margin_r": 0.233744,
-    "margin_std": 0.02415,
-    "ci_low": 0.192986,
-    "ci_high": 0.267644,
-    "avg_turnout_rate": 0.845
+    "predicted_margin_r": 0.214559,
+    "margin_std": 0.019196,
+    "ci_low": 0.185168,
+    "ci_high": 0.257144,
+    "avg_turnout_rate": 0.845,
+    "total_votes_2020": 23874
   },
   {
     "county_fips": "37057",
     "county_name": "Davidson",
-    "predicted_margin_r": 0.528183,
-    "margin_std": 0.01914,
-    "ci_low": 0.501932,
-    "ci_high": 0.561232,
-    "avg_turnout_rate": 0.8546
+    "predicted_margin_r": 0.498841,
+    "margin_std": 0.020909,
+    "ci_low": 0.46369,
+    "ci_high": 0.538826,
+    "avg_turnout_rate": 0.8571,
+    "total_votes_2020": 87294
   },
   {
     "county_fips": "37059",
     "county_name": "Davie",
-    "predicted_margin_r": 0.528658,
-    "margin_std": 0.019992,
-    "ci_low": 0.497773,
-    "ci_high": 0.565378,
-    "avg_turnout_rate": 0.8396
+    "predicted_margin_r": 0.500873,
+    "margin_std": 0.018303,
+    "ci_low": 0.469238,
+    "ci_high": 0.538413,
+    "avg_turnout_rate": 0.8401,
+    "total_votes_2020": 24941
   },
   {
     "county_fips": "37061",
     "county_name": "Duplin",
-    "predicted_margin_r": 0.199041,
-    "margin_std": 0.027505,
-    "ci_low": 0.143715,
-    "ci_high": 0.247144,
-    "avg_turnout_rate": 0.6434
+    "predicted_margin_r": 0.232732,
+    "margin_std": 0.026536,
+    "ci_low": 0.18687,
+    "ci_high": 0.278349,
+    "avg_turnout_rate": 0.6408,
+    "total_votes_2020": 22560
   },
   {
     "county_fips": "37063",
     "county_name": "Durham",
-    "predicted_margin_r": -0.691967,
-    "margin_std": 0.019124,
-    "ci_low": -0.724508,
-    "ci_high": -0.660423,
-    "avg_turnout_rate": 0.8565
+    "predicted_margin_r": -0.65591,
+    "margin_std": 0.017396,
+    "ci_low": -0.693591,
+    "ci_high": -0.626899,
+    "avg_turnout_rate": 0.8573,
+    "total_votes_2020": 177147
   },
   {
     "county_fips": "37065",
     "county_name": "Edgecombe",
-    "predicted_margin_r": -0.377258,
-    "margin_std": 0.026189,
-    "ci_low": -0.421431,
-    "ci_high": -0.338437,
-    "avg_turnout_rate": 0.7483
+    "predicted_margin_r": -0.295361,
+    "margin_std": 0.02469,
+    "ci_low": -0.351638,
+    "ci_high": -0.253529,
+    "avg_turnout_rate": 0.7471,
+    "total_votes_2020": 25295
   },
   {
     "county_fips": "37067",
     "county_name": "Forsyth",
-    "predicted_margin_r": -0.180156,
-    "margin_std": 0.024612,
-    "ci_low": -0.216063,
-    "ci_high": -0.130327,
-    "avg_turnout_rate": 0.8192
+    "predicted_margin_r": -0.157376,
+    "margin_std": 0.022244,
+    "ci_low": -0.192697,
+    "ci_high": -0.109283,
+    "avg_turnout_rate": 0.8148,
+    "total_votes_2020": 198097
   },
   {
     "county_fips": "37069",
     "county_name": "Franklin",
-    "predicted_margin_r": 0.117297,
-    "margin_std": 0.025987,
-    "ci_low": 0.06782,
-    "ci_high": 0.155692,
-    "avg_turnout_rate": 0.7776
+    "predicted_margin_r": 0.141258,
+    "margin_std": 0.028481,
+    "ci_low": 0.074362,
+    "ci_high": 0.181866,
+    "avg_turnout_rate": 0.7754,
+    "total_votes_2020": 36780
   },
   {
     "county_fips": "37071",
     "county_name": "Gaston",
-    "predicted_margin_r": 0.320801,
-    "margin_std": 0.022697,
-    "ci_low": 0.287545,
-    "ci_high": 0.360289,
-    "avg_turnout_rate": 0.8405
+    "predicted_margin_r": 0.300281,
+    "margin_std": 0.024755,
+    "ci_low": 0.243796,
+    "ci_high": 0.337393,
+    "avg_turnout_rate": 0.8405,
+    "total_votes_2020": 113992
   },
   {
     "county_fips": "37073",
     "county_name": "Gates",
-    "predicted_margin_r": 0.102812,
-    "margin_std": 0.027946,
-    "ci_low": 0.061074,
-    "ci_high": 0.14915,
-    "avg_turnout_rate": 0.6982
+    "predicted_margin_r": 0.139162,
+    "margin_std": 0.029755,
+    "ci_low": 0.088835,
+    "ci_high": 0.189756,
+    "avg_turnout_rate": 0.696,
+    "total_votes_2020": 5913
   },
   {
     "county_fips": "37075",
     "county_name": "Graham",
-    "predicted_margin_r": 0.665423,
-    "margin_std": 0.020925,
-    "ci_low": 0.632527,
-    "ci_high": 0.700284,
-    "avg_turnout_rate": 0.754
+    "predicted_margin_r": 0.634978,
+    "margin_std": 0.022479,
+    "ci_low": 0.590669,
+    "ci_high": 0.677712,
+    "avg_turnout_rate": 0.7529,
+    "total_votes_2020": 4615
   },
   {
     "county_fips": "37077",
     "county_name": "Granville",
-    "predicted_margin_r": 0.013452,
-    "margin_std": 0.022136,
-    "ci_low": -0.022614,
-    "ci_high": 0.050017,
-    "avg_turnout_rate": 0.7496
+    "predicted_margin_r": 0.06669,
+    "margin_std": 0.02246,
+    "ci_low": 0.02025,
+    "ci_high": 0.105076,
+    "avg_turnout_rate": 0.7462,
+    "total_votes_2020": 31212
   },
   {
     "county_fips": "37079",
     "county_name": "Greene",
-    "predicted_margin_r": 0.072319,
-    "margin_std": 0.025546,
-    "ci_low": 0.03274,
-    "ci_high": 0.11347,
-    "avg_turnout_rate": 0.6265
+    "predicted_margin_r": 0.122733,
+    "margin_std": 0.029766,
+    "ci_low": 0.072419,
+    "ci_high": 0.172744,
+    "avg_turnout_rate": 0.6235,
+    "total_votes_2020": 8706
   },
   {
     "county_fips": "37081",
     "county_name": "Guilford",
-    "predicted_margin_r": -0.301803,
-    "margin_std": 0.024274,
-    "ci_low": -0.339793,
-    "ci_high": -0.266552,
-    "avg_turnout_rate": 0.8616
+    "predicted_margin_r": -0.263768,
+    "margin_std": 0.025243,
+    "ci_low": -0.311303,
+    "ci_high": -0.215686,
+    "avg_turnout_rate": 0.8615,
+    "total_votes_2020": 280380
   },
   {
     "county_fips": "37083",
     "county_name": "Halifax",
-    "predicted_margin_r": -0.315448,
-    "margin_std": 0.027991,
-    "ci_low": -0.355592,
-    "ci_high": -0.268233,
-    "avg_turnout_rate": 0.7219
+    "predicted_margin_r": -0.228561,
+    "margin_std": 0.025163,
+    "ci_low": -0.267223,
+    "ci_high": -0.17732,
+    "avg_turnout_rate": 0.7193,
+    "total_votes_2020": 25625
   },
   {
     "county_fips": "37085",
     "county_name": "Harnett",
-    "predicted_margin_r": 0.251362,
-    "margin_std": 0.025583,
-    "ci_low": 0.206872,
-    "ci_high": 0.295071,
-    "avg_turnout_rate": 0.712
+    "predicted_margin_r": 0.251612,
+    "margin_std": 0.024334,
+    "ci_low": 0.203099,
+    "ci_high": 0.298616,
+    "avg_turnout_rate": 0.712,
+    "total_votes_2020": 57270
   },
   {
     "county_fips": "37087",
     "county_name": "Haywood",
-    "predicted_margin_r": 0.330915,
-    "margin_std": 0.024236,
-    "ci_low": 0.295332,
-    "ci_high": 0.367315,
-    "avg_turnout_rate": 0.7904
+    "predicted_margin_r": 0.300358,
+    "margin_std": 0.02552,
+    "ci_low": 0.262538,
+    "ci_high": 0.342777,
+    "avg_turnout_rate": 0.7883,
+    "total_votes_2020": 35978
   },
   {
     "county_fips": "37089",
     "county_name": "Henderson",
-    "predicted_margin_r": 0.271964,
-    "margin_std": 0.022846,
-    "ci_low": 0.233686,
-    "ci_high": 0.309142,
-    "avg_turnout_rate": 0.8342
+    "predicted_margin_r": 0.231605,
+    "margin_std": 0.023784,
+    "ci_low": 0.182665,
+    "ci_high": 0.267045,
+    "avg_turnout_rate": 0.8337,
+    "total_votes_2020": 67243
   },
   {
     "county_fips": "37091",
     "county_name": "Hertford",
-    "predicted_margin_r": -0.445639,
-    "margin_std": 0.021767,
-    "ci_low": -0.480833,
-    "ci_high": -0.411602,
-    "avg_turnout_rate": 0.6777
+    "predicted_margin_r": -0.368555,
+    "margin_std": 0.026637,
+    "ci_low": -0.423628,
+    "ci_high": -0.315853,
+    "avg_turnout_rate": 0.6796,
+    "total_votes_2020": 10576
   },
   {
     "county_fips": "37093",
     "county_name": "Hoke",
-    "predicted_margin_r": -0.167097,
-    "margin_std": 0.028465,
-    "ci_low": -0.212554,
-    "ci_high": -0.125476,
-    "avg_turnout_rate": 0.6319
+    "predicted_margin_r": -0.113185,
+    "margin_std": 0.02643,
+    "ci_low": -0.161508,
+    "ci_high": -0.074501,
+    "avg_turnout_rate": 0.6328,
+    "total_votes_2020": 21257
   },
   {
     "county_fips": "37095",
     "county_name": "Hyde",
-    "predicted_margin_r": 0.129603,
-    "margin_std": 0.025207,
-    "ci_low": 0.086881,
-    "ci_high": 0.171228,
-    "avg_turnout_rate": 0.6838
+    "predicted_margin_r": 0.154981,
+    "margin_std": 0.022312,
+    "ci_low": 0.108601,
+    "ci_high": 0.185031,
+    "avg_turnout_rate": 0.6866,
+    "total_votes_2020": 2464
   },
   {
     "county_fips": "37097",
     "county_name": "Iredell",
-    "predicted_margin_r": 0.368989,
-    "margin_std": 0.020113,
-    "ci_low": 0.338264,
-    "ci_high": 0.396823,
-    "avg_turnout_rate": 0.8699
+    "predicted_margin_r": 0.355118,
+    "margin_std": 0.023685,
+    "ci_low": 0.307001,
+    "ci_high": 0.393448,
+    "avg_turnout_rate": 0.8715,
+    "total_votes_2020": 100898
   },
   {
     "county_fips": "37099",
     "county_name": "Jackson",
-    "predicted_margin_r": 0.134546,
-    "margin_std": 0.024278,
-    "ci_low": 0.100173,
-    "ci_high": 0.175234,
-    "avg_turnout_rate": 0.7006
+    "predicted_margin_r": 0.124812,
+    "margin_std": 0.023838,
+    "ci_low": 0.085976,
+    "ci_high": 0.172237,
+    "avg_turnout_rate": 0.7007,
+    "total_votes_2020": 20947
   },
   {
     "county_fips": "37101",
     "county_name": "Johnston",
-    "predicted_margin_r": 0.287989,
-    "margin_std": 0.02213,
-    "ci_low": 0.251193,
-    "ci_high": 0.318886,
-    "avg_turnout_rate": 0.8373
+    "predicted_margin_r": 0.275748,
+    "margin_std": 0.023254,
+    "ci_low": 0.22945,
+    "ci_high": 0.317469,
+    "avg_turnout_rate": 0.8404,
+    "total_votes_2020": 109610
   },
   {
     "county_fips": "37103",
     "county_name": "Jones",
-    "predicted_margin_r": 0.175928,
-    "margin_std": 0.022628,
-    "ci_low": 0.138102,
-    "ci_high": 0.210234,
-    "avg_turnout_rate": 0.7356
+    "predicted_margin_r": 0.203305,
+    "margin_std": 0.026573,
+    "ci_low": 0.154098,
+    "ci_high": 0.251725,
+    "avg_turnout_rate": 0.7336,
+    "total_votes_2020": 5477
   },
   {
     "county_fips": "37105",
     "county_name": "Lee",
-    "predicted_margin_r": 0.143786,
-    "margin_std": 0.024593,
-    "ci_low": 0.10536,
-    "ci_high": 0.185281,
-    "avg_turnout_rate": 0.7455
+    "predicted_margin_r": 0.162647,
+    "margin_std": 0.027039,
+    "ci_low": 0.12293,
+    "ci_high": 0.212573,
+    "avg_turnout_rate": 0.7418,
+    "total_votes_2020": 28612
   },
   {
     "county_fips": "37107",
     "county_name": "Lenoir",
-    "predicted_margin_r": 0.006104,
-    "margin_std": 0.022156,
-    "ci_low": -0.023796,
-    "ci_high": 0.046673,
-    "avg_turnout_rate": 0.7437
+    "predicted_margin_r": 0.042705,
+    "margin_std": 0.028359,
+    "ci_low": -0.005984,
+    "ci_high": 0.089266,
+    "avg_turnout_rate": 0.7416,
+    "total_votes_2020": 28195
   },
   {
     "county_fips": "37109",
     "county_name": "Lincoln",
-    "predicted_margin_r": 0.51469,
-    "margin_std": 0.019561,
-    "ci_low": 0.486361,
-    "ci_high": 0.547603,
-    "avg_turnout_rate": 0.8466
+    "predicted_margin_r": 0.488601,
+    "margin_std": 0.023994,
+    "ci_low": 0.449676,
+    "ci_high": 0.529235,
+    "avg_turnout_rate": 0.8489,
+    "total_votes_2020": 49615
   },
   {
     "county_fips": "37113",
     "county_name": "Macon",
-    "predicted_margin_r": 0.472335,
-    "margin_std": 0.023727,
-    "ci_low": 0.429601,
-    "ci_high": 0.507063,
-    "avg_turnout_rate": 0.7747
+    "predicted_margin_r": 0.438736,
+    "margin_std": 0.024174,
+    "ci_low": 0.392119,
+    "ci_high": 0.480583,
+    "avg_turnout_rate": 0.7748,
+    "total_votes_2020": 20441
   },
   {
     "county_fips": "37115",
     "county_name": "Madison",
-    "predicted_margin_r": 0.314636,
-    "margin_std": 0.024174,
-    "ci_low": 0.275226,
-    "ci_high": 0.354311,
-    "avg_turnout_rate": 0.7427
+    "predicted_margin_r": 0.283657,
+    "margin_std": 0.02048,
+    "ci_low": 0.243443,
+    "ci_high": 0.323538,
+    "avg_turnout_rate": 0.7439,
+    "total_votes_2020": 12880
   },
   {
     "county_fips": "37117",
     "county_name": "Martin",
-    "predicted_margin_r": -0.011581,
-    "margin_std": 0.027758,
-    "ci_low": -0.054228,
-    "ci_high": 0.031995,
-    "avg_turnout_rate": 0.7136
+    "predicted_margin_r": 0.049992,
+    "margin_std": 0.0235,
+    "ci_low": 0.010312,
+    "ci_high": 0.09907,
+    "avg_turnout_rate": 0.7112,
+    "total_votes_2020": 12443
   },
   {
     "county_fips": "37111",
     "county_name": "McDowell",
-    "predicted_margin_r": 0.560669,
-    "margin_std": 0.022902,
-    "ci_low": 0.525406,
-    "ci_high": 0.602773,
-    "avg_turnout_rate": 0.7947
+    "predicted_margin_r": 0.52398,
+    "margin_std": 0.023141,
+    "ci_low": 0.469706,
+    "ci_high": 0.561134,
+    "avg_turnout_rate": 0.7948,
+    "total_votes_2020": 22715
   },
   {
     "county_fips": "37119",
     "county_name": "Mecklenburg",
-    "predicted_margin_r": -0.406485,
-    "margin_std": 0.019775,
-    "ci_low": -0.443175,
-    "ci_high": -0.373405,
-    "avg_turnout_rate": 0.8862
+    "predicted_margin_r": -0.379386,
+    "margin_std": 0.022353,
+    "ci_low": -0.426956,
+    "ci_high": -0.341206,
+    "avg_turnout_rate": 0.8867,
+    "total_votes_2020": 557318
   },
   {
     "county_fips": "37121",
     "county_name": "Mitchell",
-    "predicted_margin_r": 0.656372,
-    "margin_std": 0.01651,
-    "ci_low": 0.628981,
-    "ci_high": 0.678438,
-    "avg_turnout_rate": 0.787
+    "predicted_margin_r": 0.615623,
+    "margin_std": 0.01674,
+    "ci_low": 0.575856,
+    "ci_high": 0.643038,
+    "avg_turnout_rate": 0.7873,
+    "total_votes_2020": 8957
   },
   {
     "county_fips": "37123",
     "county_name": "Montgomery",
-    "predicted_margin_r": 0.319567,
-    "margin_std": 0.025109,
-    "ci_low": 0.277543,
-    "ci_high": 0.362542,
-    "avg_turnout_rate": 0.6878
+    "predicted_margin_r": 0.329231,
+    "margin_std": 0.025078,
+    "ci_low": 0.288908,
+    "ci_high": 0.379537,
+    "avg_turnout_rate": 0.6852,
+    "total_votes_2020": 12738
   },
   {
     "county_fips": "37125",
     "county_name": "Moore",
-    "predicted_margin_r": 0.3326,
-    "margin_std": 0.02572,
-    "ci_low": 0.292826,
-    "ci_high": 0.373748,
-    "avg_turnout_rate": 0.7635
+    "predicted_margin_r": 0.314207,
+    "margin_std": 0.023988,
+    "ci_low": 0.274219,
+    "ci_high": 0.356692,
+    "avg_turnout_rate": 0.763,
+    "total_votes_2020": 57543
   },
   {
     "county_fips": "37127",
     "county_name": "Nash",
-    "predicted_margin_r": -0.039616,
-    "margin_std": 0.026098,
-    "ci_low": -0.082614,
-    "ci_high": -0.001375,
-    "avg_turnout_rate": 0.7887
+    "predicted_margin_r": 0.006003,
+    "margin_std": 0.027809,
+    "ci_low": -0.03349,
+    "ci_high": 0.060804,
+    "avg_turnout_rate": 0.7861,
+    "total_votes_2020": 51774
   },
   {
     "county_fips": "37129",
     "county_name": "New Hanover",
-    "predicted_margin_r": -0.008227,
-    "margin_std": 0.024988,
-    "ci_low": -0.054007,
-    "ci_high": 0.028839,
-    "avg_turnout_rate": 0.8553
+    "predicted_margin_r": -0.020942,
+    "margin_std": 0.024265,
+    "ci_low": -0.074452,
+    "ci_high": 0.016267,
+    "avg_turnout_rate": 0.8562,
+    "total_votes_2020": 129469
   },
   {
     "county_fips": "37131",
     "county_name": "Northampton",
-    "predicted_margin_r": -0.311066,
-    "margin_std": 0.027724,
-    "ci_low": -0.352993,
-    "ci_high": -0.268338,
-    "avg_turnout_rate": 0.6863
+    "predicted_margin_r": -0.232998,
+    "margin_std": 0.028699,
+    "ci_low": -0.288491,
+    "ci_high": -0.174487,
+    "avg_turnout_rate": 0.6896,
+    "total_votes_2020": 10058
   },
   {
     "county_fips": "37133",
     "county_name": "Onslow",
-    "predicted_margin_r": 0.346857,
-    "margin_std": 0.020853,
-    "ci_low": 0.312652,
-    "ci_high": 0.38051,
-    "avg_turnout_rate": 0.773
+    "predicted_margin_r": 0.329691,
+    "margin_std": 0.023108,
+    "ci_low": 0.294395,
+    "ci_high": 0.373057,
+    "avg_turnout_rate": 0.774,
+    "total_votes_2020": 70344
   },
   {
     "county_fips": "37135",
     "county_name": "Orange",
-    "predicted_margin_r": -0.555325,
-    "margin_std": 0.018184,
-    "ci_low": -0.579343,
-    "ci_high": -0.525266,
-    "avg_turnout_rate": 0.8874
+    "predicted_margin_r": -0.515935,
+    "margin_std": 0.020581,
+    "ci_low": -0.556645,
+    "ci_high": -0.476252,
+    "avg_turnout_rate": 0.886,
+    "total_votes_2020": 83770
   },
   {
     "county_fips": "37137",
     "county_name": "Pamlico",
-    "predicted_margin_r": 0.295474,
-    "margin_std": 0.01968,
-    "ci_low": 0.261927,
-    "ci_high": 0.32595,
-    "avg_turnout_rate": 0.7878
+    "predicted_margin_r": 0.303132,
+    "margin_std": 0.018016,
+    "ci_low": 0.266961,
+    "ci_high": 0.33399,
+    "avg_turnout_rate": 0.7863,
+    "total_votes_2020": 7562
   },
   {
     "county_fips": "37139",
     "county_name": "Pasquotank",
-    "predicted_margin_r": -0.048312,
-    "margin_std": 0.026003,
-    "ci_low": -0.092515,
-    "ci_high": -0.010705,
-    "avg_turnout_rate": 0.7334
+    "predicted_margin_r": -0.006314,
+    "margin_std": 0.029169,
+    "ci_low": -0.054911,
+    "ci_high": 0.044017,
+    "avg_turnout_rate": 0.7314,
+    "total_votes_2020": 19602
   },
   {
     "county_fips": "37141",
     "county_name": "Pender",
-    "predicted_margin_r": 0.345645,
-    "margin_std": 0.023791,
-    "ci_low": 0.306296,
-    "ci_high": 0.390463,
-    "avg_turnout_rate": 0.7583
+    "predicted_margin_r": 0.329738,
+    "margin_std": 0.021201,
+    "ci_low": 0.289234,
+    "ci_high": 0.371397,
+    "avg_turnout_rate": 0.7579,
+    "total_votes_2020": 33679
   },
   {
     "county_fips": "37143",
     "county_name": "Perquimans",
-    "predicted_margin_r": 0.317953,
-    "margin_std": 0.020852,
-    "ci_low": 0.28977,
-    "ci_high": 0.351051,
-    "avg_turnout_rate": 0.7514
+    "predicted_margin_r": 0.337619,
+    "margin_std": 0.026429,
+    "ci_low": 0.281256,
+    "ci_high": 0.382233,
+    "avg_turnout_rate": 0.7498,
+    "total_votes_2020": 7395
   },
   {
     "county_fips": "37145",
     "county_name": "Person",
-    "predicted_margin_r": 0.198421,
-    "margin_std": 0.023639,
-    "ci_low": 0.16489,
-    "ci_high": 0.237476,
-    "avg_turnout_rate": 0.762
+    "predicted_margin_r": 0.219074,
+    "margin_std": 0.015685,
+    "ci_low": 0.187916,
+    "ci_high": 0.243151,
+    "avg_turnout_rate": 0.7622,
+    "total_votes_2020": 21649
   },
   {
     "county_fips": "37147",
     "county_name": "Pitt",
-    "predicted_margin_r": -0.145767,
-    "margin_std": 0.023749,
-    "ci_low": -0.181627,
-    "ci_high": -0.118946,
-    "avg_turnout_rate": 0.7668
+    "predicted_margin_r": -0.101363,
+    "margin_std": 0.028385,
+    "ci_low": -0.147764,
+    "ci_high": -0.053954,
+    "avg_turnout_rate": 0.7667,
+    "total_votes_2020": 86234
   },
   {
     "county_fips": "37149",
     "county_name": "Polk",
-    "predicted_margin_r": 0.326519,
-    "margin_std": 0.023732,
-    "ci_low": 0.285538,
-    "ci_high": 0.365039,
-    "avg_turnout_rate": 0.7892
+    "predicted_margin_r": 0.300869,
+    "margin_std": 0.024872,
+    "ci_low": 0.246474,
+    "ci_high": 0.340905,
+    "avg_turnout_rate": 0.7864,
+    "total_votes_2020": 12207
   },
   {
     "county_fips": "37151",
     "county_name": "Randolph",
-    "predicted_margin_r": 0.617037,
-    "margin_std": 0.022734,
-    "ci_low": 0.586653,
-    "ci_high": 0.648782,
-    "avg_turnout_rate": 0.8164
+    "predicted_margin_r": 0.595199,
+    "margin_std": 0.015635,
+    "ci_low": 0.560593,
+    "ci_high": 0.62064,
+    "avg_turnout_rate": 0.8169,
+    "total_votes_2020": 72512
   },
   {
     "county_fips": "37153",
     "county_name": "Richmond",
-    "predicted_margin_r": 0.096667,
-    "margin_std": 0.024712,
-    "ci_low": 0.055349,
-    "ci_high": 0.134524,
-    "avg_turnout_rate": 0.7147
+    "predicted_margin_r": 0.136515,
+    "margin_std": 0.027105,
+    "ci_low": 0.091062,
+    "ci_high": 0.187119,
+    "avg_turnout_rate": 0.719,
+    "total_votes_2020": 20584
   },
   {
     "county_fips": "37155",
     "county_name": "Robeson",
-    "predicted_margin_r": 0.091966,
-    "margin_std": 0.025049,
-    "ci_low": 0.058962,
-    "ci_high": 0.132363,
-    "avg_turnout_rate": 0.5785
+    "predicted_margin_r": 0.152261,
+    "margin_std": 0.024507,
+    "ci_low": 0.106483,
+    "ci_high": 0.199056,
+    "avg_turnout_rate": 0.5822,
+    "total_votes_2020": 46826
   },
   {
     "county_fips": "37157",
     "county_name": "Rockingham",
-    "predicted_margin_r": 0.345991,
-    "margin_std": 0.015848,
-    "ci_low": 0.316475,
-    "ci_high": 0.369495,
-    "avg_turnout_rate": 0.782
+    "predicted_margin_r": 0.34141,
+    "margin_std": 0.019679,
+    "ci_low": 0.31052,
+    "ci_high": 0.371422,
+    "avg_turnout_rate": 0.7826,
+    "total_votes_2020": 47293
   },
   {
     "county_fips": "37159",
     "county_name": "Rowan",
-    "predicted_margin_r": 0.387425,
-    "margin_std": 0.023975,
-    "ci_low": 0.340533,
-    "ci_high": 0.41527,
-    "avg_turnout_rate": 0.7838
+    "predicted_margin_r": 0.378671,
+    "margin_std": 0.018443,
+    "ci_low": 0.344737,
+    "ci_high": 0.41341,
+    "avg_turnout_rate": 0.784,
+    "total_votes_2020": 72411
   },
   {
     "county_fips": "37161",
     "county_name": "Rutherford",
-    "predicted_margin_r": 0.517813,
-    "margin_std": 0.021467,
-    "ci_low": 0.483915,
-    "ci_high": 0.547586,
-    "avg_turnout_rate": 0.7907
+    "predicted_margin_r": 0.492481,
+    "margin_std": 0.021891,
+    "ci_low": 0.449489,
+    "ci_high": 0.531224,
+    "avg_turnout_rate": 0.7903,
+    "total_votes_2020": 34026
   },
   {
     "county_fips": "37163",
     "county_name": "Sampson",
-    "predicted_margin_r": 0.192834,
-    "margin_std": 0.028133,
-    "ci_low": 0.149546,
-    "ci_high": 0.234896,
-    "avg_turnout_rate": 0.7013
+    "predicted_margin_r": 0.223027,
+    "margin_std": 0.031668,
+    "ci_low": 0.172474,
+    "ci_high": 0.285602,
+    "avg_turnout_rate": 0.7011,
+    "total_votes_2020": 28377
   },
   {
     "county_fips": "37165",
     "county_name": "Scotland",
-    "predicted_margin_r": -0.075692,
-    "margin_std": 0.022541,
-    "ci_low": -0.117204,
-    "ci_high": -0.04463,
-    "avg_turnout_rate": 0.6379
+    "predicted_margin_r": -0.001916,
+    "margin_std": 0.024564,
+    "ci_low": -0.047822,
+    "ci_high": 0.040228,
+    "avg_turnout_rate": 0.6413,
+    "total_votes_2020": 14659
   },
   {
     "county_fips": "37167",
     "county_name": "Stanly",
-    "predicted_margin_r": 0.558244,
-    "margin_std": 0.02126,
-    "ci_low": 0.525175,
-    "ci_high": 0.590571,
-    "avg_turnout_rate": 0.802
+    "predicted_margin_r": 0.534543,
+    "margin_std": 0.019179,
+    "ci_low": 0.494761,
+    "ci_high": 0.571765,
+    "avg_turnout_rate": 0.8032,
+    "total_votes_2020": 33587
   },
   {
     "county_fips": "37169",
     "county_name": "Stokes",
-    "predicted_margin_r": 0.630303,
-    "margin_std": 0.01969,
-    "ci_low": 0.595973,
-    "ci_high": 0.655704,
-    "avg_turnout_rate": 0.7793
+    "predicted_margin_r": 0.60666,
+    "margin_std": 0.017127,
+    "ci_low": 0.578931,
+    "ci_high": 0.640294,
+    "avg_turnout_rate": 0.7767,
+    "total_votes_2020": 25428
   },
   {
     "county_fips": "37171",
     "county_name": "Surry",
-    "predicted_margin_r": 0.568302,
-    "margin_std": 0.021782,
-    "ci_low": 0.535007,
-    "ci_high": 0.595723,
-    "avg_turnout_rate": 0.7971
+    "predicted_margin_r": 0.547017,
+    "margin_std": 0.022106,
+    "ci_low": 0.510097,
+    "ci_high": 0.588333,
+    "avg_turnout_rate": 0.7967,
+    "total_votes_2020": 36259
   },
   {
     "county_fips": "37173",
     "county_name": "Swain",
-    "predicted_margin_r": 0.261738,
-    "margin_std": 0.03069,
-    "ci_low": 0.213699,
-    "ci_high": 0.310543,
-    "avg_turnout_rate": 0.6852
+    "predicted_margin_r": 0.2456,
+    "margin_std": 0.026621,
+    "ci_low": 0.198167,
+    "ci_high": 0.293463,
+    "avg_turnout_rate": 0.6857,
+    "total_votes_2020": 6941
   },
   {
     "county_fips": "37175",
     "county_name": "Transylvania",
-    "predicted_margin_r": 0.247812,
-    "margin_std": 0.024456,
-    "ci_low": 0.209197,
-    "ci_high": 0.286455,
-    "avg_turnout_rate": 0.7767
+    "predicted_margin_r": 0.20755,
+    "margin_std": 0.025436,
+    "ci_low": 0.15842,
+    "ci_high": 0.251846,
+    "avg_turnout_rate": 0.7759,
+    "total_votes_2020": 20080
   },
   {
     "county_fips": "37177",
     "county_name": "Tyrrell",
-    "predicted_margin_r": 0.112945,
-    "margin_std": 0.025744,
-    "ci_low": 0.061711,
-    "ci_high": 0.148333,
-    "avg_turnout_rate": 0.7222
+    "predicted_margin_r": 0.159222,
+    "margin_std": 0.024451,
+    "ci_low": 0.117614,
+    "ci_high": 0.198772,
+    "avg_turnout_rate": 0.7189,
+    "total_votes_2020": 1802
   },
   {
     "county_fips": "37179",
     "county_name": "Union",
-    "predicted_margin_r": 0.292908,
-    "margin_std": 0.022398,
-    "ci_low": 0.259017,
-    "ci_high": 0.327315,
-    "avg_turnout_rate": 0.8336
+    "predicted_margin_r": 0.273245,
+    "margin_std": 0.021549,
+    "ci_low": 0.239787,
+    "ci_high": 0.311193,
+    "avg_turnout_rate": 0.8346,
+    "total_votes_2020": 129107
   },
   {
     "county_fips": "37181",
     "county_name": "Vance",
-    "predicted_margin_r": -0.290925,
-    "margin_std": 0.027771,
-    "ci_low": -0.337887,
-    "ci_high": -0.242413,
-    "avg_turnout_rate": 0.6955
+    "predicted_margin_r": -0.215659,
+    "margin_std": 0.024677,
+    "ci_low": -0.274702,
+    "ci_high": -0.17437,
+    "avg_turnout_rate": 0.6966,
+    "total_votes_2020": 20822
   },
   {
     "county_fips": "37183",
     "county_name": "Wake",
-    "predicted_margin_r": -0.300929,
-    "margin_std": 0.021495,
-    "ci_low": -0.334778,
-    "ci_high": -0.269829,
-    "avg_turnout_rate": 0.8849
+    "predicted_margin_r": -0.279601,
+    "margin_std": 0.020894,
+    "ci_low": -0.317019,
+    "ci_high": -0.244454,
+    "avg_turnout_rate": 0.885,
+    "total_votes_2020": 619533
   },
   {
     "county_fips": "37185",
     "county_name": "Warren",
-    "predicted_margin_r": -0.374605,
-    "margin_std": 0.027851,
-    "ci_low": -0.415931,
-    "ci_high": -0.329369,
-    "avg_turnout_rate": 0.7346
+    "predicted_margin_r": -0.286531,
+    "margin_std": 0.020756,
+    "ci_low": -0.31818,
+    "ci_high": -0.24111,
+    "avg_turnout_rate": 0.7393,
+    "total_votes_2020": 10152
   },
   {
     "county_fips": "37187",
     "county_name": "Washington",
-    "predicted_margin_r": -0.186487,
-    "margin_std": 0.022819,
-    "ci_low": -0.222947,
-    "ci_high": -0.152542,
-    "avg_turnout_rate": 0.6853
+    "predicted_margin_r": -0.121505,
+    "margin_std": 0.02997,
+    "ci_low": -0.180211,
+    "ci_high": -0.062071,
+    "avg_turnout_rate": 0.6893,
+    "total_votes_2020": 6177
   },
   {
     "county_fips": "37189",
     "county_name": "Watauga",
-    "predicted_margin_r": -0.016534,
-    "margin_std": 0.019472,
-    "ci_low": -0.04882,
-    "ci_high": 0.014857,
-    "avg_turnout_rate": 0.8384
+    "predicted_margin_r": -0.037431,
+    "margin_std": 0.025142,
+    "ci_low": -0.085418,
+    "ci_high": 0.006956,
+    "avg_turnout_rate": 0.8376,
+    "total_votes_2020": 31573
   },
   {
     "county_fips": "37191",
     "county_name": "Wayne",
-    "predicted_margin_r": 0.100256,
-    "margin_std": 0.026196,
-    "ci_low": 0.052407,
-    "ci_high": 0.134798,
-    "avg_turnout_rate": 0.7336
+    "predicted_margin_r": 0.127934,
+    "margin_std": 0.023556,
+    "ci_low": 0.089443,
+    "ci_high": 0.170887,
+    "avg_turnout_rate": 0.7371,
+    "total_votes_2020": 54924
   },
   {
     "county_fips": "37193",
     "county_name": "Wilkes",
-    "predicted_margin_r": 0.629879,
-    "margin_std": 0.020334,
-    "ci_low": 0.601608,
-    "ci_high": 0.670933,
-    "avg_turnout_rate": 0.8011
+    "predicted_margin_r": 0.594522,
+    "margin_std": 0.019793,
+    "ci_low": 0.557295,
+    "ci_high": 0.628492,
+    "avg_turnout_rate": 0.802,
+    "total_votes_2020": 35103
   },
   {
     "county_fips": "37195",
     "county_name": "Wilson",
-    "predicted_margin_r": -0.085241,
-    "margin_std": 0.021413,
-    "ci_low": -0.118805,
-    "ci_high": -0.050644,
-    "avg_turnout_rate": 0.7866
+    "predicted_margin_r": -0.036276,
+    "margin_std": 0.024175,
+    "ci_low": -0.079725,
+    "ci_high": 0.006674,
+    "avg_turnout_rate": 0.7872,
+    "total_votes_2020": 40335
   },
   {
     "county_fips": "37197",
     "county_name": "Yadkin",
-    "predicted_margin_r": 0.676319,
-    "margin_std": 0.017383,
-    "ci_low": 0.645938,
-    "ci_high": 0.701168,
-    "avg_turnout_rate": 0.7949
+    "predicted_margin_r": 0.651415,
+    "margin_std": 0.020155,
+    "ci_low": 0.610498,
+    "ci_high": 0.692662,
+    "avg_turnout_rate": 0.7949,
+    "total_votes_2020": 19696
   },
   {
     "county_fips": "37199",
     "county_name": "Yancey",
-    "predicted_margin_r": 0.406036,
-    "margin_std": 0.023144,
-    "ci_low": 0.361366,
-    "ci_high": 0.439039,
-    "avg_turnout_rate": 0.7966
+    "predicted_margin_r": 0.375087,
+    "margin_std": 0.021508,
+    "ci_low": 0.343973,
+    "ci_high": 0.424433,
+    "avg_turnout_rate": 0.7974,
+    "total_votes_2020": 11204
   }
 ]
