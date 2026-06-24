@@ -1,0 +1,28 @@
+{
+  "simulation": {
+    "pearson_r": 0.9709,
+    "p_value": 0.0,
+    "mae": 0.0664,
+    "rmse": 0.0874,
+    "directional_accuracy": 0.93,
+    "max_error": 0.2806,
+    "median_error": 0.0459,
+    "n_counties": 100
+  },
+  "baseline": {
+    "pearson_r": 0.9883,
+    "p_value": 0.0,
+    "mae": 0.0345,
+    "rmse": 0.0433,
+    "directional_accuracy": 0.97,
+    "max_error": 0.1381,
+    "median_error": 0.0288,
+    "n_counties": 100
+  },
+  "improvement": {
+    "mae_improvement": -0.0319,
+    "rmse_improvement": -0.0441,
+    "correlation_improvement": -0.0174,
+    "directional_improvement": -0.04
+  }
+}

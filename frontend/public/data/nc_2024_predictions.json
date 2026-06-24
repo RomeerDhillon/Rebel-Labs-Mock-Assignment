@@ -1,0 +1,902 @@
+[
+  {
+    "county_fips": "37001",
+    "county_name": "Alamance",
+    "predicted_margin_r": 0.095036,
+    "margin_std": 0.028435,
+    "ci_low": 0.056812,
+    "ci_high": 0.141059,
+    "avg_turnout_rate": 0.7419
+  },
+  {
+    "county_fips": "37003",
+    "county_name": "Alexander",
+    "predicted_margin_r": 0.634451,
+    "margin_std": 0.019207,
+    "ci_low": 0.608596,
+    "ci_high": 0.66977,
+    "avg_turnout_rate": 0.8084
+  },
+  {
+    "county_fips": "37005",
+    "county_name": "Alleghany",
+    "predicted_margin_r": 0.549182,
+    "margin_std": 0.021552,
+    "ci_low": 0.517122,
+    "ci_high": 0.57733,
+    "avg_turnout_rate": 0.6793
+  },
+  {
+    "county_fips": "37007",
+    "county_name": "Anson",
+    "predicted_margin_r": -0.138553,
+    "margin_std": 0.033275,
+    "ci_low": -0.200407,
+    "ci_high": -0.081705,
+    "avg_turnout_rate": 0.6198
+  },
+  {
+    "county_fips": "37009",
+    "county_name": "Ashe",
+    "predicted_margin_r": 0.522276,
+    "margin_std": 0.024222,
+    "ci_low": 0.473659,
+    "ci_high": 0.557845,
+    "avg_turnout_rate": 0.7842
+  },
+  {
+    "county_fips": "37011",
+    "county_name": "Avery",
+    "predicted_margin_r": 0.612786,
+    "margin_std": 0.020764,
+    "ci_low": 0.581378,
+    "ci_high": 0.642534,
+    "avg_turnout_rate": 0.7765
+  },
+  {
+    "county_fips": "37013",
+    "county_name": "Beaufort",
+    "predicted_margin_r": 0.257813,
+    "margin_std": 0.02288,
+    "ci_low": 0.223149,
+    "ci_high": 0.299088,
+    "avg_turnout_rate": 0.7182
+  },
+  {
+    "county_fips": "37015",
+    "county_name": "Bertie",
+    "predicted_margin_r": -0.333245,
+    "margin_std": 0.023763,
+    "ci_low": -0.373092,
+    "ci_high": -0.297444,
+    "avg_turnout_rate": 0.6815
+  },
+  {
+    "county_fips": "37017",
+    "county_name": "Bladen",
+    "predicted_margin_r": 0.091651,
+    "margin_std": 0.030097,
+    "ci_low": 0.04989,
+    "ci_high": 0.14233,
+    "avg_turnout_rate": 0.6983
+  },
+  {
+    "county_fips": "37019",
+    "county_name": "Brunswick",
+    "predicted_margin_r": 0.321605,
+    "margin_std": 0.02127,
+    "ci_low": 0.290187,
+    "ci_high": 0.351441,
+    "avg_turnout_rate": 0.7992
+  },
+  {
+    "county_fips": "37021",
+    "county_name": "Buncombe",
+    "predicted_margin_r": -0.193934,
+    "margin_std": 0.025991,
+    "ci_low": -0.240976,
+    "ci_high": -0.161011,
+    "avg_turnout_rate": 0.8398
+  },
+  {
+    "county_fips": "37023",
+    "county_name": "Burke",
+    "predicted_margin_r": 0.456229,
+    "margin_std": 0.02462,
+    "ci_low": 0.419337,
+    "ci_high": 0.498132,
+    "avg_turnout_rate": 0.7613
+  },
+  {
+    "county_fips": "37025",
+    "county_name": "Cabarrus",
+    "predicted_margin_r": 0.141102,
+    "margin_std": 0.022557,
+    "ci_low": 0.09973,
+    "ci_high": 0.17248,
+    "avg_turnout_rate": 0.8109
+  },
+  {
+    "county_fips": "37027",
+    "county_name": "Caldwell",
+    "predicted_margin_r": 0.574057,
+    "margin_std": 0.018736,
+    "ci_low": 0.543228,
+    "ci_high": 0.604821,
+    "avg_turnout_rate": 0.8528
+  },
+  {
+    "county_fips": "37029",
+    "county_name": "Camden",
+    "predicted_margin_r": 0.521938,
+    "margin_std": 0.017869,
+    "ci_low": 0.497444,
+    "ci_high": 0.549387,
+    "avg_turnout_rate": 0.7669
+  },
+  {
+    "county_fips": "37031",
+    "county_name": "Carteret",
+    "predicted_margin_r": 0.500245,
+    "margin_std": 0.019765,
+    "ci_low": 0.464942,
+    "ci_high": 0.529341,
+    "avg_turnout_rate": 0.8537
+  },
+  {
+    "county_fips": "37033",
+    "county_name": "Caswell",
+    "predicted_margin_r": 0.153864,
+    "margin_std": 0.021502,
+    "ci_low": 0.111249,
+    "ci_high": 0.186352,
+    "avg_turnout_rate": 0.7244
+  },
+  {
+    "county_fips": "37035",
+    "county_name": "Catawba",
+    "predicted_margin_r": 0.418256,
+    "margin_std": 0.021017,
+    "ci_low": 0.389312,
+    "ci_high": 0.451141,
+    "avg_turnout_rate": 0.8333
+  },
+  {
+    "county_fips": "37037",
+    "county_name": "Chatham",
+    "predicted_margin_r": -0.105278,
+    "margin_std": 0.023835,
+    "ci_low": -0.153948,
+    "ci_high": -0.075435,
+    "avg_turnout_rate": 0.8641
+  },
+  {
+    "county_fips": "37039",
+    "county_name": "Cherokee",
+    "predicted_margin_r": 0.631652,
+    "margin_std": 0.018279,
+    "ci_low": 0.60167,
+    "ci_high": 0.662139,
+    "avg_turnout_rate": 0.8084
+  },
+  {
+    "county_fips": "37041",
+    "county_name": "Chowan",
+    "predicted_margin_r": 0.135421,
+    "margin_std": 0.025166,
+    "ci_low": 0.095177,
+    "ci_high": 0.186224,
+    "avg_turnout_rate": 0.7318
+  },
+  {
+    "county_fips": "37043",
+    "county_name": "Clay",
+    "predicted_margin_r": 0.58447,
+    "margin_std": 0.019012,
+    "ci_low": 0.556045,
+    "ci_high": 0.614838,
+    "avg_turnout_rate": 0.821
+  },
+  {
+    "county_fips": "37045",
+    "county_name": "Cleveland",
+    "predicted_margin_r": 0.333775,
+    "margin_std": 0.025595,
+    "ci_low": 0.289937,
+    "ci_high": 0.376528,
+    "avg_turnout_rate": 0.7894
+  },
+  {
+    "county_fips": "37047",
+    "county_name": "Columbus",
+    "predicted_margin_r": 0.235206,
+    "margin_std": 0.027416,
+    "ci_low": 0.183933,
+    "ci_high": 0.276185,
+    "avg_turnout_rate": 0.6742
+  },
+  {
+    "county_fips": "37049",
+    "county_name": "Craven",
+    "predicted_margin_r": 0.213757,
+    "margin_std": 0.02627,
+    "ci_low": 0.170509,
+    "ci_high": 0.254593,
+    "avg_turnout_rate": 0.7511
+  },
+  {
+    "county_fips": "37051",
+    "county_name": "Cumberland",
+    "predicted_margin_r": -0.241319,
+    "margin_std": 0.027721,
+    "ci_low": -0.28092,
+    "ci_high": -0.20405,
+    "avg_turnout_rate": 0.746
+  },
+  {
+    "county_fips": "37053",
+    "county_name": "Currituck",
+    "predicted_margin_r": 0.546496,
+    "margin_std": 0.021167,
+    "ci_low": 0.519617,
+    "ci_high": 0.584008,
+    "avg_turnout_rate": 0.8154
+  },
+  {
+    "county_fips": "37055",
+    "county_name": "Dare",
+    "predicted_margin_r": 0.240816,
+    "margin_std": 0.027446,
+    "ci_low": 0.196838,
+    "ci_high": 0.291522,
+    "avg_turnout_rate": 0.8462
+  },
+  {
+    "county_fips": "37057",
+    "county_name": "Davidson",
+    "predicted_margin_r": 0.526681,
+    "margin_std": 0.023573,
+    "ci_low": 0.491603,
+    "ci_high": 0.566023,
+    "avg_turnout_rate": 0.8565
+  },
+  {
+    "county_fips": "37059",
+    "county_name": "Davie",
+    "predicted_margin_r": 0.532096,
+    "margin_std": 0.021067,
+    "ci_low": 0.494644,
+    "ci_high": 0.56738,
+    "avg_turnout_rate": 0.8382
+  },
+  {
+    "county_fips": "37061",
+    "county_name": "Duplin",
+    "predicted_margin_r": 0.206015,
+    "margin_std": 0.026516,
+    "ci_low": 0.16723,
+    "ci_high": 0.249167,
+    "avg_turnout_rate": 0.6443
+  },
+  {
+    "county_fips": "37063",
+    "county_name": "Durham",
+    "predicted_margin_r": -0.690878,
+    "margin_std": 0.014451,
+    "ci_low": -0.712986,
+    "ci_high": -0.672922,
+    "avg_turnout_rate": 0.8569
+  },
+  {
+    "county_fips": "37065",
+    "county_name": "Edgecombe",
+    "predicted_margin_r": -0.378786,
+    "margin_std": 0.024016,
+    "ci_low": -0.415679,
+    "ci_high": -0.34545,
+    "avg_turnout_rate": 0.7477
+  },
+  {
+    "county_fips": "37067",
+    "county_name": "Forsyth",
+    "predicted_margin_r": -0.172436,
+    "margin_std": 0.020911,
+    "ci_low": -0.208524,
+    "ci_high": -0.136043,
+    "avg_turnout_rate": 0.8168
+  },
+  {
+    "county_fips": "37069",
+    "county_name": "Franklin",
+    "predicted_margin_r": 0.120658,
+    "margin_std": 0.02273,
+    "ci_low": 0.081384,
+    "ci_high": 0.155329,
+    "avg_turnout_rate": 0.7777
+  },
+  {
+    "county_fips": "37071",
+    "county_name": "Gaston",
+    "predicted_margin_r": 0.321115,
+    "margin_std": 0.021704,
+    "ci_low": 0.291455,
+    "ci_high": 0.358563,
+    "avg_turnout_rate": 0.8409
+  },
+  {
+    "county_fips": "37073",
+    "county_name": "Gates",
+    "predicted_margin_r": 0.097971,
+    "margin_std": 0.023527,
+    "ci_low": 0.055164,
+    "ci_high": 0.131888,
+    "avg_turnout_rate": 0.697
+  },
+  {
+    "county_fips": "37075",
+    "county_name": "Graham",
+    "predicted_margin_r": 0.66657,
+    "margin_std": 0.015838,
+    "ci_low": 0.640852,
+    "ci_high": 0.691765,
+    "avg_turnout_rate": 0.755
+  },
+  {
+    "county_fips": "37077",
+    "county_name": "Granville",
+    "predicted_margin_r": 0.025538,
+    "margin_std": 0.02859,
+    "ci_low": -0.01414,
+    "ci_high": 0.064937,
+    "avg_turnout_rate": 0.7463
+  },
+  {
+    "county_fips": "37079",
+    "county_name": "Greene",
+    "predicted_margin_r": 0.077613,
+    "margin_std": 0.028386,
+    "ci_low": 0.036424,
+    "ci_high": 0.133134,
+    "avg_turnout_rate": 0.6239
+  },
+  {
+    "county_fips": "37081",
+    "county_name": "Guilford",
+    "predicted_margin_r": -0.295655,
+    "margin_std": 0.021281,
+    "ci_low": -0.326976,
+    "ci_high": -0.25921,
+    "avg_turnout_rate": 0.8594
+  },
+  {
+    "county_fips": "37083",
+    "county_name": "Halifax",
+    "predicted_margin_r": -0.314296,
+    "margin_std": 0.029162,
+    "ci_low": -0.358655,
+    "ci_high": -0.260988,
+    "avg_turnout_rate": 0.7192
+  },
+  {
+    "county_fips": "37085",
+    "county_name": "Harnett",
+    "predicted_margin_r": 0.255807,
+    "margin_std": 0.028671,
+    "ci_low": 0.211904,
+    "ci_high": 0.298549,
+    "avg_turnout_rate": 0.711
+  },
+  {
+    "county_fips": "37087",
+    "county_name": "Haywood",
+    "predicted_margin_r": 0.332309,
+    "margin_std": 0.02377,
+    "ci_low": 0.290557,
+    "ci_high": 0.360169,
+    "avg_turnout_rate": 0.7883
+  },
+  {
+    "county_fips": "37089",
+    "county_name": "Henderson",
+    "predicted_margin_r": 0.274795,
+    "margin_std": 0.024864,
+    "ci_low": 0.238098,
+    "ci_high": 0.315525,
+    "avg_turnout_rate": 0.8336
+  },
+  {
+    "county_fips": "37091",
+    "county_name": "Hertford",
+    "predicted_margin_r": -0.444221,
+    "margin_std": 0.025981,
+    "ci_low": -0.491911,
+    "ci_high": -0.404487,
+    "avg_turnout_rate": 0.6789
+  },
+  {
+    "county_fips": "37093",
+    "county_name": "Hoke",
+    "predicted_margin_r": -0.164219,
+    "margin_std": 0.032783,
+    "ci_low": -0.220457,
+    "ci_high": -0.11275,
+    "avg_turnout_rate": 0.6312
+  },
+  {
+    "county_fips": "37095",
+    "county_name": "Hyde",
+    "predicted_margin_r": 0.127532,
+    "margin_std": 0.027775,
+    "ci_low": 0.080878,
+    "ci_high": 0.168508,
+    "avg_turnout_rate": 0.6853
+  },
+  {
+    "county_fips": "37097",
+    "county_name": "Iredell",
+    "predicted_margin_r": 0.367935,
+    "margin_std": 0.021443,
+    "ci_low": 0.334618,
+    "ci_high": 0.403843,
+    "avg_turnout_rate": 0.8709
+  },
+  {
+    "county_fips": "37099",
+    "county_name": "Jackson",
+    "predicted_margin_r": 0.139465,
+    "margin_std": 0.024731,
+    "ci_low": 0.104314,
+    "ci_high": 0.183554,
+    "avg_turnout_rate": 0.7019
+  },
+  {
+    "county_fips": "37101",
+    "county_name": "Johnston",
+    "predicted_margin_r": 0.284005,
+    "margin_std": 0.025403,
+    "ci_low": 0.251087,
+    "ci_high": 0.327045,
+    "avg_turnout_rate": 0.8391
+  },
+  {
+    "county_fips": "37103",
+    "county_name": "Jones",
+    "predicted_margin_r": 0.181198,
+    "margin_std": 0.026279,
+    "ci_low": 0.138436,
+    "ci_high": 0.22438,
+    "avg_turnout_rate": 0.7322
+  },
+  {
+    "county_fips": "37105",
+    "county_name": "Lee",
+    "predicted_margin_r": 0.149499,
+    "margin_std": 0.025574,
+    "ci_low": 0.106824,
+    "ci_high": 0.192301,
+    "avg_turnout_rate": 0.7409
+  },
+  {
+    "county_fips": "37107",
+    "county_name": "Lenoir",
+    "predicted_margin_r": 0.00845,
+    "margin_std": 0.028972,
+    "ci_low": -0.027425,
+    "ci_high": 0.055724,
+    "avg_turnout_rate": 0.7396
+  },
+  {
+    "county_fips": "37109",
+    "county_name": "Lincoln",
+    "predicted_margin_r": 0.512141,
+    "margin_std": 0.018898,
+    "ci_low": 0.483454,
+    "ci_high": 0.542979,
+    "avg_turnout_rate": 0.8475
+  },
+  {
+    "county_fips": "37113",
+    "county_name": "Macon",
+    "predicted_margin_r": 0.471056,
+    "margin_std": 0.022038,
+    "ci_low": 0.436721,
+    "ci_high": 0.505534,
+    "avg_turnout_rate": 0.7755
+  },
+  {
+    "county_fips": "37115",
+    "county_name": "Madison",
+    "predicted_margin_r": 0.312313,
+    "margin_std": 0.022379,
+    "ci_low": 0.278476,
+    "ci_high": 0.348607,
+    "avg_turnout_rate": 0.7445
+  },
+  {
+    "county_fips": "37117",
+    "county_name": "Martin",
+    "predicted_margin_r": -0.008224,
+    "margin_std": 0.028101,
+    "ci_low": -0.042386,
+    "ci_high": 0.044093,
+    "avg_turnout_rate": 0.7109
+  },
+  {
+    "county_fips": "37111",
+    "county_name": "McDowell",
+    "predicted_margin_r": 0.560375,
+    "margin_std": 0.021481,
+    "ci_low": 0.5231,
+    "ci_high": 0.589769,
+    "avg_turnout_rate": 0.7973
+  },
+  {
+    "county_fips": "37119",
+    "county_name": "Mecklenburg",
+    "predicted_margin_r": -0.404016,
+    "margin_std": 0.020657,
+    "ci_low": -0.432463,
+    "ci_high": -0.372358,
+    "avg_turnout_rate": 0.8872
+  },
+  {
+    "county_fips": "37121",
+    "county_name": "Mitchell",
+    "predicted_margin_r": 0.657145,
+    "margin_std": 0.017086,
+    "ci_low": 0.632585,
+    "ci_high": 0.683735,
+    "avg_turnout_rate": 0.7887
+  },
+  {
+    "county_fips": "37123",
+    "county_name": "Montgomery",
+    "predicted_margin_r": 0.319917,
+    "margin_std": 0.023976,
+    "ci_low": 0.283096,
+    "ci_high": 0.364401,
+    "avg_turnout_rate": 0.6893
+  },
+  {
+    "county_fips": "37125",
+    "county_name": "Moore",
+    "predicted_margin_r": 0.328725,
+    "margin_std": 0.024244,
+    "ci_low": 0.293032,
+    "ci_high": 0.36342,
+    "avg_turnout_rate": 0.7636
+  },
+  {
+    "county_fips": "37127",
+    "county_name": "Nash",
+    "predicted_margin_r": -0.032307,
+    "margin_std": 0.022936,
+    "ci_low": -0.074197,
+    "ci_high": 0.005184,
+    "avg_turnout_rate": 0.7864
+  },
+  {
+    "county_fips": "37129",
+    "county_name": "New Hanover",
+    "predicted_margin_r": -0.003344,
+    "margin_std": 0.023861,
+    "ci_low": -0.042525,
+    "ci_high": 0.035556,
+    "avg_turnout_rate": 0.8583
+  },
+  {
+    "county_fips": "37131",
+    "county_name": "Northampton",
+    "predicted_margin_r": -0.315261,
+    "margin_std": 0.022256,
+    "ci_low": -0.353742,
+    "ci_high": -0.283989,
+    "avg_turnout_rate": 0.6941
+  },
+  {
+    "county_fips": "37133",
+    "county_name": "Onslow",
+    "predicted_margin_r": 0.348874,
+    "margin_std": 0.023578,
+    "ci_low": 0.307667,
+    "ci_high": 0.380985,
+    "avg_turnout_rate": 0.7742
+  },
+  {
+    "county_fips": "37135",
+    "county_name": "Orange",
+    "predicted_margin_r": -0.547219,
+    "margin_std": 0.020621,
+    "ci_low": -0.577084,
+    "ci_high": -0.516003,
+    "avg_turnout_rate": 0.8879
+  },
+  {
+    "county_fips": "37137",
+    "county_name": "Pamlico",
+    "predicted_margin_r": 0.302467,
+    "margin_std": 0.027423,
+    "ci_low": 0.267823,
+    "ci_high": 0.348529,
+    "avg_turnout_rate": 0.7893
+  },
+  {
+    "county_fips": "37139",
+    "county_name": "Pasquotank",
+    "predicted_margin_r": -0.043322,
+    "margin_std": 0.025789,
+    "ci_low": -0.082606,
+    "ci_high": -0.002093,
+    "avg_turnout_rate": 0.7354
+  },
+  {
+    "county_fips": "37141",
+    "county_name": "Pender",
+    "predicted_margin_r": 0.345762,
+    "margin_std": 0.024839,
+    "ci_low": 0.306447,
+    "ci_high": 0.390987,
+    "avg_turnout_rate": 0.7577
+  },
+  {
+    "county_fips": "37143",
+    "county_name": "Perquimans",
+    "predicted_margin_r": 0.316562,
+    "margin_std": 0.024435,
+    "ci_low": 0.283585,
+    "ci_high": 0.357626,
+    "avg_turnout_rate": 0.7508
+  },
+  {
+    "county_fips": "37145",
+    "county_name": "Person",
+    "predicted_margin_r": 0.19719,
+    "margin_std": 0.022446,
+    "ci_low": 0.161497,
+    "ci_high": 0.232884,
+    "avg_turnout_rate": 0.7636
+  },
+  {
+    "county_fips": "37147",
+    "county_name": "Pitt",
+    "predicted_margin_r": -0.143398,
+    "margin_std": 0.024545,
+    "ci_low": -0.180697,
+    "ci_high": -0.110877,
+    "avg_turnout_rate": 0.768
+  },
+  {
+    "county_fips": "37149",
+    "county_name": "Polk",
+    "predicted_margin_r": 0.327507,
+    "margin_std": 0.02232,
+    "ci_low": 0.295001,
+    "ci_high": 0.360265,
+    "avg_turnout_rate": 0.7874
+  },
+  {
+    "county_fips": "37151",
+    "county_name": "Randolph",
+    "predicted_margin_r": 0.618664,
+    "margin_std": 0.021098,
+    "ci_low": 0.585717,
+    "ci_high": 0.65333,
+    "avg_turnout_rate": 0.8164
+  },
+  {
+    "county_fips": "37153",
+    "county_name": "Richmond",
+    "predicted_margin_r": 0.097037,
+    "margin_std": 0.026452,
+    "ci_low": 0.054558,
+    "ci_high": 0.139443,
+    "avg_turnout_rate": 0.7165
+  },
+  {
+    "county_fips": "37155",
+    "county_name": "Robeson",
+    "predicted_margin_r": 0.088719,
+    "margin_std": 0.030779,
+    "ci_low": 0.041086,
+    "ci_high": 0.141318,
+    "avg_turnout_rate": 0.5802
+  },
+  {
+    "county_fips": "37157",
+    "county_name": "Rockingham",
+    "predicted_margin_r": 0.340915,
+    "margin_std": 0.023466,
+    "ci_low": 0.304314,
+    "ci_high": 0.380167,
+    "avg_turnout_rate": 0.7804
+  },
+  {
+    "county_fips": "37159",
+    "county_name": "Rowan",
+    "predicted_margin_r": 0.389204,
+    "margin_std": 0.023109,
+    "ci_low": 0.35788,
+    "ci_high": 0.425939,
+    "avg_turnout_rate": 0.788
+  },
+  {
+    "county_fips": "37161",
+    "county_name": "Rutherford",
+    "predicted_margin_r": 0.514972,
+    "margin_std": 0.020251,
+    "ci_low": 0.484365,
+    "ci_high": 0.546649,
+    "avg_turnout_rate": 0.7908
+  },
+  {
+    "county_fips": "37163",
+    "county_name": "Sampson",
+    "predicted_margin_r": 0.191623,
+    "margin_std": 0.02569,
+    "ci_low": 0.148486,
+    "ci_high": 0.230416,
+    "avg_turnout_rate": 0.7023
+  },
+  {
+    "county_fips": "37165",
+    "county_name": "Scotland",
+    "predicted_margin_r": -0.087614,
+    "margin_std": 0.027211,
+    "ci_low": -0.132129,
+    "ci_high": -0.045139,
+    "avg_turnout_rate": 0.6419
+  },
+  {
+    "county_fips": "37167",
+    "county_name": "Stanly",
+    "predicted_margin_r": 0.558941,
+    "margin_std": 0.021138,
+    "ci_low": 0.525055,
+    "ci_high": 0.5946,
+    "avg_turnout_rate": 0.8029
+  },
+  {
+    "county_fips": "37169",
+    "county_name": "Stokes",
+    "predicted_margin_r": 0.631884,
+    "margin_std": 0.017082,
+    "ci_low": 0.605617,
+    "ci_high": 0.663661,
+    "avg_turnout_rate": 0.779
+  },
+  {
+    "county_fips": "37171",
+    "county_name": "Surry",
+    "predicted_margin_r": 0.566973,
+    "margin_std": 0.019124,
+    "ci_low": 0.536438,
+    "ci_high": 0.598192,
+    "avg_turnout_rate": 0.7962
+  },
+  {
+    "county_fips": "37173",
+    "county_name": "Swain",
+    "predicted_margin_r": 0.263794,
+    "margin_std": 0.025303,
+    "ci_low": 0.226526,
+    "ci_high": 0.303651,
+    "avg_turnout_rate": 0.6884
+  },
+  {
+    "county_fips": "37175",
+    "county_name": "Transylvania",
+    "predicted_margin_r": 0.246543,
+    "margin_std": 0.022689,
+    "ci_low": 0.214109,
+    "ci_high": 0.289643,
+    "avg_turnout_rate": 0.7763
+  },
+  {
+    "county_fips": "37177",
+    "county_name": "Tyrrell",
+    "predicted_margin_r": 0.121082,
+    "margin_std": 0.026628,
+    "ci_low": 0.08065,
+    "ci_high": 0.166946,
+    "avg_turnout_rate": 0.7204
+  },
+  {
+    "county_fips": "37179",
+    "county_name": "Union",
+    "predicted_margin_r": 0.294624,
+    "margin_std": 0.023442,
+    "ci_low": 0.252375,
+    "ci_high": 0.32466,
+    "avg_turnout_rate": 0.8359
+  },
+  {
+    "county_fips": "37181",
+    "county_name": "Vance",
+    "predicted_margin_r": -0.290205,
+    "margin_std": 0.027787,
+    "ci_low": -0.346162,
+    "ci_high": -0.257765,
+    "avg_turnout_rate": 0.6924
+  },
+  {
+    "county_fips": "37183",
+    "county_name": "Wake",
+    "predicted_margin_r": -0.299328,
+    "margin_std": 0.02144,
+    "ci_low": -0.333923,
+    "ci_high": -0.264875,
+    "avg_turnout_rate": 0.886
+  },
+  {
+    "county_fips": "37185",
+    "county_name": "Warren",
+    "predicted_margin_r": -0.380216,
+    "margin_std": 0.022515,
+    "ci_low": -0.416862,
+    "ci_high": -0.341148,
+    "avg_turnout_rate": 0.7346
+  },
+  {
+    "county_fips": "37187",
+    "county_name": "Washington",
+    "predicted_margin_r": -0.193766,
+    "margin_std": 0.024204,
+    "ci_low": -0.231752,
+    "ci_high": -0.157384,
+    "avg_turnout_rate": 0.6864
+  },
+  {
+    "county_fips": "37189",
+    "county_name": "Watauga",
+    "predicted_margin_r": -0.012117,
+    "margin_std": 0.028069,
+    "ci_low": -0.061336,
+    "ci_high": 0.030119,
+    "avg_turnout_rate": 0.8385
+  },
+  {
+    "county_fips": "37191",
+    "county_name": "Wayne",
+    "predicted_margin_r": 0.099541,
+    "margin_std": 0.024296,
+    "ci_low": 0.064193,
+    "ci_high": 0.139444,
+    "avg_turnout_rate": 0.7361
+  },
+  {
+    "county_fips": "37193",
+    "county_name": "Wilkes",
+    "predicted_margin_r": 0.62961,
+    "margin_std": 0.021038,
+    "ci_low": 0.59578,
+    "ci_high": 0.661805,
+    "avg_turnout_rate": 0.7991
+  },
+  {
+    "county_fips": "37195",
+    "county_name": "Wilson",
+    "predicted_margin_r": -0.086472,
+    "margin_std": 0.025756,
+    "ci_low": -0.131764,
+    "ci_high": -0.047455,
+    "avg_turnout_rate": 0.7923
+  },
+  {
+    "county_fips": "37197",
+    "county_name": "Yadkin",
+    "predicted_margin_r": 0.676072,
+    "margin_std": 0.018227,
+    "ci_low": 0.640928,
+    "ci_high": 0.697929,
+    "avg_turnout_rate": 0.7959
+  },
+  {
+    "county_fips": "37199",
+    "county_name": "Yancey",
+    "predicted_margin_r": 0.405087,
+    "margin_std": 0.023689,
+    "ci_low": 0.36551,
+    "ci_high": 0.444522,
+    "avg_turnout_rate": 0.7991
+  }
+]
