@@ -18,15 +18,7 @@ No 2024 data is used.
 import numpy as np
 from typing import Dict, List, Any
 
-
-def _sigmoid(x: float) -> float:
-    """Numerically stable sigmoid."""
-    if x >= 0:
-        z = np.exp(-x)
-        return 1.0 / (1.0 + z)
-    else:
-        z = np.exp(x)
-        return z / (1.0 + z)
+from sim.utils import sigmoid
 
 
 # Turnout logit adjustments by attribute
@@ -67,41 +59,56 @@ RACE_TURNOUT_LOGIT = {
 }
 
 
+def compute_turnout_probabilities(
+    voters: Dict[str, np.ndarray],
+    county_baseline_logit: float,
+    turnout_sensitivity: float = 1.0,
+) -> np.ndarray:
+    """
+    Compute turnout probability for all voters (vectorized).
+
+    Parameters
+    ----------
+    voters : dict of arrays
+        Keys: 'age_band', 'party_reg', 'urban_rural', 'education',
+        'race' — each a 1-D array of strings.
+    county_baseline_logit : float
+        County baseline turnout in logit space.
+    turnout_sensitivity : float
+        Multiplier on demographic effects.
+
+    Returns
+    -------
+    np.ndarray
+        Turnout probability for each voter, shape (n,).
+    """
+    n = len(voters["age_band"])
+    logits = np.full(n, county_baseline_logit)
+
+    for attr, lookup in [
+        ("age_band", AGE_TURNOUT_LOGIT),
+        ("party_reg", PARTY_TURNOUT_LOGIT),
+        ("urban_rural", URBAN_TURNOUT_LOGIT),
+        ("education", EDUCATION_TURNOUT_LOGIT),
+        ("race", RACE_TURNOUT_LOGIT),
+    ]:
+        arr = voters[attr]
+        shifts = np.array([lookup.get(v, 0.0) for v in arr])
+        logits += turnout_sensitivity * shifts
+
+    return sigmoid(logits)
+
+
+# Backward-compatible scalar interface
 def compute_turnout_probability(
     voter: Dict[str, Any],
     county_baseline_logit: float,
     turnout_sensitivity: float = 1.0,
 ) -> float:
-    """
-    Compute the probability that a voter turns out.
-
-    Parameters
-    ----------
-    voter : dict
-        Synthetic voter with attributes (age_band, party_reg, etc.)
-    county_baseline_logit : float
-        County-level baseline turnout in logit space, calibrated from
-        historical county turnout rates.
-    turnout_sensitivity : float
-        Multiplier on demographic effects. 1.0 = default.
-        >1.0 amplifies demographic differentials,
-        <1.0 shrinks them toward the county average.
-
-    Returns
-    -------
-    float
-        Probability of turning out, in [0, 1].
-    """
-    logit = county_baseline_logit
-
-    # Add demographic adjustments scaled by sensitivity
-    logit += turnout_sensitivity * AGE_TURNOUT_LOGIT.get(voter["age_band"], 0.0)
-    logit += turnout_sensitivity * PARTY_TURNOUT_LOGIT.get(voter["party_reg"], 0.0)
-    logit += turnout_sensitivity * URBAN_TURNOUT_LOGIT.get(voter["urban_rural"], 0.0)
-    logit += turnout_sensitivity * EDUCATION_TURNOUT_LOGIT.get(voter["education"], 0.0)
-    logit += turnout_sensitivity * RACE_TURNOUT_LOGIT.get(voter["race"], 0.0)
-
-    return _sigmoid(logit)
+    """Scalar wrapper — computes turnout probability for a single voter dict."""
+    batch = {k: np.array([voter[k]]) for k in
+             ["age_band", "party_reg", "urban_rural", "education", "race"]}
+    return float(compute_turnout_probabilities(batch, county_baseline_logit, turnout_sensitivity)[0])
 
 
 def compute_county_baseline_logit(
@@ -121,24 +128,22 @@ def compute_county_baseline_logit(
         Logit (log-odds) of the turnout rate.
     """
     rate = np.clip(historical_turnout_rate, 0.1, 0.95)
-    return np.log(rate / (1 - rate))
+    return float(np.log(rate / (1 - rate)))
 
 
 def simulate_turnout(
-    voters: List[Dict[str, Any]],
+    voters: Dict[str, np.ndarray],
     county_baseline_logit: float,
     rng: np.random.RandomState,
     turnout_sensitivity: float = 1.0,
-) -> List[bool]:
+) -> np.ndarray:
     """
-    Simulate turnout for a list of voters.
+    Simulate turnout for all voters (vectorized).
 
-    Returns a list of booleans (True = voted, False = stayed home).
+    Returns np.ndarray of bool (True = voted, False = stayed home).
     """
-    turnout_probs = np.array([
-        compute_turnout_probability(v, county_baseline_logit, turnout_sensitivity)
-        for v in voters
-    ])
-
-    draws = rng.random(len(voters))
-    return list(draws < turnout_probs)
+    turnout_probs = compute_turnout_probabilities(
+        voters, county_baseline_logit, turnout_sensitivity
+    )
+    draws = rng.random(len(turnout_probs))
+    return draws < turnout_probs

@@ -13,8 +13,8 @@ pip install -r requirements.txt
 ### 2. Fetch data & build features
 
 ```bash
-PYTHONPATH=. python3 scripts/fetch_data.py
-PYTHONPATH=. python3 scripts/build_features.py
+python3 -m scripts.fetch_data
+python3 -m scripts.build_features
 ```
 
 This downloads historical election results (2008–2020) from GitHub and saves embedded ACS 2022 demographics and NCSBE voter registration data. All data is publicly available and predates the 2024 election.
@@ -22,17 +22,18 @@ This downloads historical election results (2008–2020) from GitHub and saves e
 ### 3. Run the simulation
 
 ```bash
-PYTHONPATH=. python3 scripts/export_predictions.py
+python3 -m scripts.export_predictions
 ```
 
 Outputs:
+
 - `data/predictions/nc_2024_predictions.csv` — county-level predicted margins
 - `data/predictions/nc_2024_predictions.json` — same data for the frontend
 
 ### 4. Run the backtest (optional)
 
 ```bash
-PYTHONPATH=. python3 scripts/run_backtest.py
+python3 -m scripts.run_backtest
 ```
 
 Validates the model by predicting 2020 results using only 2008–2016 data.
@@ -78,11 +79,11 @@ Open [http://localhost:3000](http://localhost:3000) to explore predictions, coun
 
 ### Data (pre-election only)
 
-| Source | Description | Years |
-|--------|-------------|-------|
-| tonmcg GitHub repos | County presidential returns | 2008–2020 |
-| NCSBE voter registration | Party registration by county | Oct 12, 2024 |
-| ACS 5-Year | Demographics: race, education, age, income, density | 2022 |
+| Source                   | Description                                         | Years        |
+| ------------------------ | --------------------------------------------------- | ------------ |
+| tonmcg GitHub repos      | County presidential returns                         | 2008–2020    |
+| NCSBE voter registration | Party registration by county                        | Oct 12, 2024 |
+| ACS 5-Year               | Demographics: race, education, age, income, density | 2022         |
 
 **No 2024 election results are used anywhere.**
 
@@ -98,6 +99,8 @@ Open [http://localhost:3000](http://localhost:3000) to explore predictions, coun
 
 5. **Monte Carlo aggregation** — 50 iterations per county. Predicted margin = mean across iterations. Uncertainty captured via standard deviation and 95% CI.
 
+6. **Statewide aggregation** — County margins are weighted by 2020 vote totals to produce a population-weighted statewide result: **R 51.0% — D 49.0% (R+1.9%)**.
+
 ### Key Design Decisions
 
 - **County history as primary anchor** — Historical margins dominate. Demographics provide interpretable but modest modulations to avoid double-counting (voter demographics correlate with county history).
@@ -106,11 +109,12 @@ Open [http://localhost:3000](http://localhost:3000) to explore predictions, coun
 
 ### Backtest Results (predicting 2020 from 2008–2016)
 
-| Metric | Simulation | Baseline (prior margin) |
-|--------|-----------|------------------------|
-| Pearson r | 0.97 | 0.99 |
-| MAE | 0.066 | 0.035 |
-| Direction | 93% | 97% |
+| Metric    | Simulation | Baseline (prior margin) |
+| --------- | ---------- | ----------------------- |
+| Pearson r | 0.98       | 0.99                    |
+| MAE       | 0.048      | 0.035                   |
+| RMSE      | 0.061      | 0.043                   |
+| Direction | 94%        | 97%                     |
 
 The prior-margin baseline is extremely strong because county partisanship is highly stable. The behavioral simulation trades a small accuracy gap for voter-level mechanics, interpretable coefficients, and scenario analysis capability.
 

@@ -34,6 +34,11 @@ def main() -> None:
         print("Run scripts/fetch_data.py and scripts/build_features.py first.")
         sys.exit(1)
 
+    # Load features to get historical vote counts for population weighting
+    features = pd.read_csv(features_path)
+    features["county_fips"] = features["county_fips"].astype(str).str.zfill(5)
+    features["total_votes_2020"] = features["votes_gop_2020"] + features["votes_dem_2020"]
+
     print("\nRunning simulation...")
     results = run_full_simulation(
         features_path=features_path,
@@ -46,10 +51,19 @@ def main() -> None:
         verbose=True,
     )
 
+    # Merge in total_votes_2020 for population-weighted statewide calculation
+    results = results.merge(
+        features[["county_fips", "total_votes_2020"]],
+        on="county_fips",
+        how="left",
+    )
+    results["total_votes_2020"] = results["total_votes_2020"].fillna(0).astype(int)
+
     # Format output
     predictions = results[[
         "county_fips", "county_name", "predicted_margin_r",
         "margin_std", "ci_low", "ci_high", "avg_turnout_rate",
+        "total_votes_2020",
     ]].copy()
 
     predictions = predictions.sort_values("county_name").reset_index(drop=True)
@@ -79,6 +93,21 @@ def main() -> None:
 
     avg_margin = predictions["predicted_margin_r"].mean()
     print(f"  Average county margin (unweighted): {avg_margin:+.4f}")
+
+    # Population-weighted statewide margin
+    votes = predictions["total_votes_2020"]
+    if votes.sum() > 0:
+        weighted_margin = float(
+            (votes * predictions["predicted_margin_r"]).sum() / votes.sum()
+        )
+        statewide_r_pct = (0.5 + weighted_margin / 2) * 100
+        statewide_d_pct = (0.5 - weighted_margin / 2) * 100
+        party = "R" if weighted_margin > 0 else "D"
+        print(f"  Statewide popular vote (pop-weighted): "
+              f"R {statewide_r_pct:.1f}% — D {statewide_d_pct:.1f}% "
+              f"({party}+{abs(weighted_margin)*100:.1f}%)")
+    else:
+        print("  WARNING: No vote count data for population weighting")
 
     # Top 5 most R and most D counties
     print("\n  Top 5 most Republican counties:")
