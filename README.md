@@ -7,14 +7,23 @@ An agent-based Monte Carlo simulation that predicts the 2024 North Carolina pres
 ### 1. Install Python dependencies
 
 ```bash
-pip install -r requirements.txt
+# macOS / Linux
+python3 -m pip install -r requirements.txt
+
+# Windows
+python -m pip install -r requirements.txt
 ```
+
+> **Note:** On Windows, use `python` instead of `python3` throughout this guide. Using `python -m pip` (instead of bare `pip`) ensures packages install into the same Python that runs the scripts. If you have multiple Python versions, ensure you're using Python 3.10+.
 
 ### 2. Fetch data & build features
 
 ```bash
-python3 -m scripts.fetch_data
-python3 -m scripts.build_features
+python3 -m scripts.fetch_data      # macOS / Linux
+python3 -m scripts.build_features   # macOS / Linux
+
+python -m scripts.fetch_data         # Windows
+python -m scripts.build_features     # Windows
 ```
 
 This downloads historical election results (2008–2020) from GitHub and saves embedded ACS 2022 demographics and NCSBE voter registration data. All data is publicly available and predates the 2024 election.
@@ -22,7 +31,8 @@ This downloads historical election results (2008–2020) from GitHub and saves e
 ### 3. Run the simulation
 
 ```bash
-python3 -m scripts.export_predictions
+python3 -m scripts.export_predictions   # macOS / Linux
+python -m scripts.export_predictions    # Windows
 ```
 
 Outputs:
@@ -33,7 +43,8 @@ Outputs:
 ### 4. Run the backtest (optional)
 
 ```bash
-python3 -m scripts.run_backtest
+python3 -m scripts.run_backtest   # macOS / Linux
+python -m scripts.run_backtest    # Windows
 ```
 
 Validates the model by predicting 2020 results using only 2008–2016 data.
@@ -243,13 +254,15 @@ The project includes **82 pytest tests** covering:
 Run all tests:
 
 ```bash
-python3 -m pytest tests/ -v
+python3 -m pytest tests/ -v              # macOS / Linux
+python -m pytest tests/ -v               # Windows
 ```
 
 Run a specific test file:
 
 ```bash
-python3 -m pytest tests/test_vote_choice.py -v
+python3 -m pytest tests/test_vote_choice.py -v   # macOS / Linux
+python -m pytest tests/test_vote_choice.py -v    # Windows
 ```
 
 ## Advanced Usage
@@ -274,7 +287,8 @@ results = run_full_simulation(
 
 ```bash
 # Edit scripts/run_backtest.py to modify parameters, then:
-python3 -m scripts.run_backtest
+python3 -m scripts.run_backtest   # macOS / Linux
+python -m scripts.run_backtest    # Windows
 ```
 
 The backtest predicts 2020 results using only 2008–2016 data, validating the model without data leakage.
