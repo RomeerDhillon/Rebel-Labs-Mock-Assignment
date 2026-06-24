@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+data/raw/
+data/processed/
+node_modules/
+frontend/.next/
+frontend/node_modules/
+.env
+*.zip
